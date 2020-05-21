@@ -40,6 +40,7 @@ namespace SemesterDemo.Windows
                 sqlCmd.Connection.Close();
                 conn.Close();
                 MessageBox.Show("Successfully inserted new data!");
+                this.Dispose();
             }
             else
             {

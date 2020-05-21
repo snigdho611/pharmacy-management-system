@@ -47,7 +47,7 @@ namespace SemesterDemo
 
                 if (dt.Rows.Count > 0)
                 {
-                    String adminName = Convert.ToString(dt.Rows[0][2]);
+                    String adminName = Convert.ToString(dt.Rows[0][1]);
                     String verify = Convert.ToString(dt.Rows[0][5]);
                     MessageBox.Show("Welcome to the system, " + adminName + "!");
                     this.Hide();

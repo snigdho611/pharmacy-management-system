@@ -1,5 +1,6 @@
 ﻿using SemesterDemo.Windows;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,8 +47,6 @@ namespace SemesterDemo
                 SqlConnection conn = new SqlConnection(ConnectionString);
                 SqlCommand sqlCmd = new SqlCommand(sql, conn);
 
-                DataTable dt = new DataTable();
-
                 sqlCmd.Connection.Open();
                 dt.Load(sqlCmd.ExecuteReader());
                 int id = Convert.ToInt32(dt.Rows[0][0]);
@@ -65,6 +64,9 @@ namespace SemesterDemo
             }
         }
 
+        DataTable dt = new DataTable();
+        DataTable dtmain = new DataTable();
+
         //Show all products
         private void button1_Click(object sender, EventArgs e)
         {
@@ -73,11 +75,12 @@ namespace SemesterDemo
             SqlConnection conn = new SqlConnection(ConnectionString);
             SqlCommand sqlCmd = new SqlCommand(sql, conn);
 
-            DataTable dt = new DataTable();
+            DataTable dtCatalog = new DataTable();
 
             sqlCmd.Connection.Open();
-            dt.Load(sqlCmd.ExecuteReader());
-            dataGridView1.DataSource = dt;
+            dtCatalog.Load(sqlCmd.ExecuteReader());
+            dtmain.Load(sqlCmd.ExecuteReader());
+            dataGridView1.DataSource = dtCatalog;
             sqlCmd.Connection.Close();
         }
 
@@ -88,18 +91,18 @@ namespace SemesterDemo
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(textBox2.Text))
+            if (string.IsNullOrWhiteSpace(textBox2.Text))
             {
                 MessageBox.Show("Please enter a valid product ID to delete!");
             }
             else
             {
                 String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
-                String sql = "delete from Catalogue where id = "+ textBox2.Text + ";";
+                String sql = "delete from Catalogue where id = " + textBox2.Text + ";";
                 SqlConnection conn = new SqlConnection(ConnectionString);
                 SqlCommand sqlCmd = new SqlCommand(sql, conn);
 
-                DataTable dt = new DataTable();
+
                 sqlCmd.Connection.Open();
                 sqlCmd.ExecuteNonQuery();
                 sqlCmd.Dispose();
@@ -129,13 +132,266 @@ namespace SemesterDemo
             }
             else
             {
-                 
+
             }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            EmployeeDetails ED = new EmployeeDetails();
 
+            ED.StartPosition = FormStartPosition.CenterScreen;
+            ED.ShowDialog();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        int total = 0;
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Int32 selectedRowCount = dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
+                Int32 selectedRowIndex = dataGridView1.CurrentCell.RowIndex;
+                if (selectedRowCount > 1)
+                {
+                    MessageBox.Show("You have selected multiple rows. Please select a single item!");
+                }
+                else
+                {
+                    String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
+                    String sql = "select * from Catalogue where id = " + Convert.ToInt32(dtmain.Rows[selectedRowIndex][0]) + ";";
+                    SqlConnection conn = new SqlConnection(ConnectionString);
+                    SqlCommand sqlCmd = new SqlCommand(sql, conn);
+
+                    DataTable dtcustomer = new DataTable();
+                    sqlCmd.Connection.Open();
+                    dtcustomer.Load(sqlCmd.ExecuteReader());
+
+
+                    sqlCmd.Connection.Close();
+                    int row = 0;
+                    try
+                    {
+                        total = total + Convert.ToInt32(dtcustomer.Rows[0][4]) * (Convert.ToInt32(textBox3.Text));
+                        dataGridView2.Rows.Add();
+                        row = dataGridView2.Rows.Count - 2;
+                        dataGridView2["Column1", row].Value = dtcustomer.Rows[0][0];
+                        dataGridView2["Column2", row].Value = dtcustomer.Rows[0][1];
+                        dataGridView2["Column3", row].Value = textBox3.Text;
+                        dataGridView2["Column4", row].Value = Convert.ToInt32(dtcustomer.Rows[0][4]) * (Convert.ToInt32(textBox3.Text));
+                        textBox4.Text = Convert.ToString(total);
+                    }
+                    catch (FormatException FE)
+                    {
+                        MessageBox.Show("Please enter a numerical value");
+                    }
+                }
+            }
+            catch (NullReferenceException NRE)
+            {
+                MessageBox.Show("You have not selected any user!");
+            }
+            catch (IndexOutOfRangeException IORE)
+            {
+                MessageBox.Show("You must load/refresh the catalog table first!");
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private static int invoice = 0;
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            invoice = invoice + 1;
+            DateTime DT;
+            DT = DateTime.Now;
+            int totalList = dataGridView2.Rows.Count - 2;
+            if ((String.IsNullOrWhiteSpace(textBox5.Text) == true || String.IsNullOrWhiteSpace(textBox6.Text) == true || String.IsNullOrWhiteSpace(textBox7.Text) == true) && String.IsNullOrWhiteSpace(textBox8.Text) == true)
+            {
+                //MessageBox.Show("Fill all three fields or leave them all empty.");
+
+                String totalItemsName = null;
+                for (int i = 0; i <= totalList; i++)
+                {
+                    totalItemsName = totalItemsName + Convert.ToString(dataGridView2["Column2", i].Value) + "x" + Convert.ToString(dataGridView2["Column3", i].Value) + " ";
+                }
+
+                String ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
+                String sql = "insert into Transactions (items, total, datetime) values ('" + totalItemsName + "', " + textBox4.Text + ", GETDATE())";
+                SqlConnection conn = new SqlConnection(ConnectionString);
+                SqlCommand sqlCmd = new SqlCommand(sql, conn);
+
+                //DataTable dt = new DataTable();
+
+                sqlCmd.Connection.Open();
+                sqlCmd.ExecuteNonQuery();
+                sqlCmd.Dispose();
+                //dataGridView1.DataSource = dt;
+                sqlCmd.Connection.Close();
+                conn.Close();
+                MessageBox.Show("Successfully inserted new transaction!");
+                //this.Dispose();
+
+                using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DT.ToString("yyyyMMddHHmmss") + ".txt"))
+                {
+                    writer.WriteLine("Product     |     " + "Price      |");
+
+                    for (int i = 0; i <= totalList; i++)
+                    {
+
+                        writer.WriteLine(Convert.ToString(dataGridView2["Column2", i].Value) + " x " +
+                            Convert.ToString(dataGridView2["Column3", i].Value) + "      |      " +
+                            Convert.ToString(dataGridView2["Column4", i].Value));
+                    }
+                    writer.WriteLine("Customer ID: " + textBox8.Text);
+                    writer.WriteLine("Total Price: " + textBox4.Text);
+                    writer.WriteLine(DT.ToString("dd/MM/yyyy HH:mm:ss"));
+                    writer.WriteLine("Billed by: " + textBox1.Text);
+                }
+            }
+            /*else if (String.IsNullOrWhiteSpace(textBox5.Text) == false && String.IsNullOrWhiteSpace(textBox6.Text) == false && String.IsNullOrWhiteSpace(textBox7.Text) == false)
+            {
+                MessageBox.Show("Entered");
+
+
+            }*/
+            else if ((String.IsNullOrWhiteSpace(textBox5.Text) == true || String.IsNullOrWhiteSpace(textBox6.Text) == true || String.IsNullOrWhiteSpace(textBox7.Text) == true) && String.IsNullOrWhiteSpace(textBox8.Text) == false)
+            {
+                String totalItemsName = null;
+                for (int i = 0; i <= totalList; i++)
+                {
+                    totalItemsName = totalItemsName + Convert.ToString(dataGridView2["Column2", i].Value) + "x" + Convert.ToString(dataGridView2["Column3", i].Value) + " ";
+                }
+
+                String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
+                string sql = "select * from Customer where cusid = " + textBox8.Text;
+
+                SqlConnection conn = new SqlConnection(ConnectionString);
+                SqlCommand sqlCmd = new SqlCommand(sql, conn);
+
+                DataTable dtTemp = new DataTable();
+
+                sqlCmd.Connection.Open();
+                //var affectedRowCount=sqlCmd.ExecuteNonQuery();
+                dtTemp.Load(sqlCmd.ExecuteReader());
+
+                if (dtTemp.Rows.Count > 0)
+                {
+                    String ConnectionString2 = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
+                    String sql2 = "insert into Transactions (cusID, items, total, datetime) values (" + textBox8.Text + ",'" + totalItemsName + "', " + textBox4.Text + ", GETDATE())";
+                    SqlConnection conn2 = new SqlConnection(ConnectionString2);
+                    SqlCommand sqlCmd2 = new SqlCommand(sql2, conn2);
+
+                    //DataTable dt = new DataTable();
+
+                    sqlCmd2.Connection.Open();
+                    sqlCmd2.ExecuteNonQuery();
+                    sqlCmd2.Dispose();
+                    //dataGridView1.DataSource = dt;
+                    sqlCmd2.Connection.Close();
+                    conn2.Close();
+                    MessageBox.Show("Successfully inserted new transaction!");
+
+                    using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DT.ToString("yyyyMMddHHmmss") + ".txt"))
+                    {
+                        writer.WriteLine("Product     |     " + "Price      |");
+
+                        for (int i = 0; i <= totalList; i++)
+                        {
+
+                            writer.WriteLine(Convert.ToString(dataGridView2["Column2", i].Value) + " x " +
+                                Convert.ToString(dataGridView2["Column3", i].Value) + "      |      " +
+                                Convert.ToString(dataGridView2["Column4", i].Value));
+                        }
+                        writer.WriteLine("Customer ID: " + textBox8.Text);
+                        writer.WriteLine("Total Price: " + textBox4.Text);
+                        writer.WriteLine(DT.ToString("dd/MM/yyyy HH:mm:ss"));
+                        writer.WriteLine("Billed by: " + textBox1.Text);
+
+                    }
+                }
+                else if (dtTemp.Rows.Count == 0)
+                {
+                    MessageBox.Show("Customer ID unavailable");
+                }
+            }
+            //If a new customer wants to enroll with their name, mail and phone
+            else if ((String.IsNullOrWhiteSpace(textBox5.Text) == false || String.IsNullOrWhiteSpace(textBox6.Text) == false || String.IsNullOrWhiteSpace(textBox7.Text) == false) && String.IsNullOrWhiteSpace(textBox8.Text) == true)
+            {
+                String totalItemsName = null;
+                for (int i = 0; i <= totalList; i++)
+                {
+                    totalItemsName = totalItemsName + Convert.ToString(dataGridView2["Column2", i].Value) + "x" + Convert.ToString(dataGridView2["Column3", i].Value) + " ";
+                }
+
+                MessageBox.Show("Added Customer");
+
+                String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
+                string sql = "insert into Customer (name, email, phone, total) values('"+textBox5.Text+"','"+textBox6.Text+"','"+textBox7.Text+"',"+textBox4.Text+")";
+                string sql2 = "select top 1 cusID from Customer Order by cusID desc";
+                SqlConnection conn = new SqlConnection(ConnectionString);
+                SqlCommand sqlCmd = new SqlCommand(sql, conn);
+                SqlCommand sqlCmd2 = new SqlCommand(sql2, conn);
+
+                DataTable dtTemp = new DataTable();
+
+                sqlCmd.Connection.Open();
+                sqlCmd.ExecuteNonQuery();
+                sqlCmd.Connection.Close();
+
+                sqlCmd2.Connection.Open();
+                dtTemp.Load(sqlCmd2.ExecuteReader());
+                sqlCmd2.Connection.Close();
+
+                if (dtTemp.Rows.Count > 0)
+                {
+                    String ConnectionString2 = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
+                    String sql3 = "insert into Transactions (cusID, items, total, datetime) values (" + Convert.ToInt32(dtTemp.Rows[0][0]) + ",'" + totalItemsName + "', " + textBox4.Text + ", GETDATE())";
+                    SqlConnection conn3 = new SqlConnection(ConnectionString2);
+                    SqlCommand sqlCmd3 = new SqlCommand(sql3, conn3);
+
+                    //DataTable dt = new DataTable();
+
+                    sqlCmd3.Connection.Open();
+                    sqlCmd3.ExecuteNonQuery();
+                    sqlCmd3.Dispose();
+                    //dataGridView1.DataSource = dt;
+                    sqlCmd3.Connection.Close();
+                    conn3.Close();
+                    MessageBox.Show("Successfully inserted new transaction!");
+
+                    using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DT.ToString("yyyyMMddHHmmss") + ".txt"))
+                    {
+                        writer.WriteLine("Product     |     " + "Price      |");
+
+                        for (int i = 0; i <= totalList; i++)
+                        {
+
+                            writer.WriteLine(Convert.ToString(dataGridView2["Column2", i].Value) + " x " +
+                                Convert.ToString(dataGridView2["Column3", i].Value) + "      |      " +
+                                Convert.ToString(dataGridView2["Column4", i].Value));
+                        }
+                        writer.WriteLine("Customer ID: " + textBox8.Text);
+                        writer.WriteLine("Total Price: " + textBox4.Text);
+                        writer.WriteLine(DT.ToString("dd/MM/yyyy HH:mm:ss"));
+                        writer.WriteLine("Billed by: " + textBox1.Text);
+
+                    }
+                }
+                if (Convert.ToInt32(totalList) <= 0)
+                {
+                    MessageBox.Show("You didn't select products!");
+                }
+            }
         }
     }
 }

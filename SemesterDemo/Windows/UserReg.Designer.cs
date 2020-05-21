@@ -194,7 +194,30 @@
             this.Load += new System.EventHandler(this.UserReg_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+        }
 
+        public int privateID;
+
+        public void updateFrame(int id, string name, string designation, string email, string phone)
+        {
+            textBox5.Visible = false;
+            textBox6.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+
+            textBox1.Text = name;
+            textBox2.Text = designation;
+            textBox3.Text = email;
+            textBox4.Text = phone;
+            privateID = id;
+        }
+
+        public void normalFrame()
+        {
+            textBox5.Visible = true;
+            textBox6.Visible = true;
+            label5.Visible = true;
+            label6.Visible = true;
         }
 
         #endregion
