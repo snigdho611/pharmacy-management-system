@@ -97,18 +97,28 @@ namespace SemesterDemo
             }
             else
             {
-                String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
-                String sql = "delete from Catalogue where id = " + textBox2.Text + ";";
-                SqlConnection conn = new SqlConnection(ConnectionString);
-                SqlCommand sqlCmd = new SqlCommand(sql, conn);
+                string message = "Are you sure you want to log out?";
+                string title = "Close Window";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
+                    String sql = "delete from Catalogue where id = " + textBox2.Text + ";";
+                    SqlConnection conn = new SqlConnection(ConnectionString);
+                    SqlCommand sqlCmd = new SqlCommand(sql, conn);
 
+                    sqlCmd.Connection.Open();
+                    sqlCmd.ExecuteNonQuery();
+                    sqlCmd.Dispose();
+                    sqlCmd.Connection.Close();
+                    conn.Close();
+                    MessageBox.Show("Successfully deleted item!");
+                }
+                else
+                {
 
-                sqlCmd.Connection.Open();
-                sqlCmd.ExecuteNonQuery();
-                sqlCmd.Dispose();
-                //dataGridView1.DataSource = dt;
-                sqlCmd.Connection.Close();
-                conn.Close();
+                }
             }
         }
 
