@@ -217,7 +217,7 @@ namespace SemesterDemo
 
         }
 
-        private static int invoice = 0;
+        public static int invoice = 0;
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -407,6 +407,12 @@ namespace SemesterDemo
         private void button8_Click(object sender, EventArgs e)
         {
            // CustomersCart F = new CustomersCart();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form1 F = new Form1();
+            F.ShowDialog();
         }
     }
 }

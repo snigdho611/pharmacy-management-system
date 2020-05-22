@@ -79,11 +79,29 @@
     <Compile Include="Entities\Catalog.cs" />
     <Compile Include="Entities\Transactions.cs" />
     <Compile Include="Entities\UserLogIn.cs" />
+    <Compile Include="Windows\CustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\CustomerDetails.Designer.cs">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Windows\EmployeeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Windows\EmployeeDetails.Designer.cs">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Receipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows\Receipt.Designer.cs">
+      <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\UpdatePassword.cs">
       <SubType>Form</SubType>
@@ -123,8 +141,14 @@
     <Compile Include="Windows\UserReg.Designer.cs">
       <DependentUpon>UserReg.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Windows\CustomerDetails.resx">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\EmployeeDetails.resx">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Receipt.resx">
+      <DependentUpon>Receipt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\UpdatePassword.resx">
       <DependentUpon>UpdatePassword.cs</DependentUpon>

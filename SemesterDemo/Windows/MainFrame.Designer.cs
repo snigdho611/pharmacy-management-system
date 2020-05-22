@@ -43,6 +43,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -73,7 +74,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catalogueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SAFDataSet)).BeginInit();
@@ -210,6 +211,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(489, 76);
             this.panel1.TabIndex = 11;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(137, 41);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(105, 27);
+            this.button8.TabIndex = 13;
+            this.button8.Text = "Customer Cart";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button5
             // 
@@ -501,22 +513,23 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // button8
+            // button9
             // 
-            this.button8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(137, 41);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(105, 27);
-            this.button8.TabIndex = 13;
-            this.button8.Text = "Customer Cart";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(291, 552);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(89, 40);
+            this.button9.TabIndex = 16;
+            this.button9.Text = "Customer Panel";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 611);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -613,5 +626,6 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
