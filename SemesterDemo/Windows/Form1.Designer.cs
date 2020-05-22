@@ -304,7 +304,7 @@
             this.Controls.Add(this.dataGridViewCart);
             this.Controls.Add(this.dataGridViewItems);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Customer Cart";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).EndInit();

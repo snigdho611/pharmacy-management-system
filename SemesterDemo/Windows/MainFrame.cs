@@ -97,8 +97,8 @@ namespace SemesterDemo
             }
             else
             {
-                string message = "Are you sure you want to log out?";
-                string title = "Close Window";
+                string message = "Are you sure you want to delete this item?";
+                string title = "Delete warning";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result = MessageBox.Show(message, title, buttons);
                 if (result == DialogResult.Yes)
@@ -173,6 +173,7 @@ namespace SemesterDemo
                 }
                 else
                 {
+                    
                     String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
                     String sql = "select * from Catalogue where id = " + Convert.ToInt32(dtmain.Rows[selectedRowIndex][0]) + ";";
                     SqlConnection conn = new SqlConnection(ConnectionString);
@@ -222,13 +223,12 @@ namespace SemesterDemo
         private void button7_Click(object sender, EventArgs e)
         {
             invoice = invoice + 1;
+            total = 0;
             DateTime DT;
             DT = DateTime.Now;
-            int totalList = dataGridView2.Rows.Count - 2;
+            int totalList = dataGridView2.Rows.Count-1;
             if ((String.IsNullOrWhiteSpace(textBox5.Text) == true || String.IsNullOrWhiteSpace(textBox6.Text) == true || String.IsNullOrWhiteSpace(textBox7.Text) == true) && String.IsNullOrWhiteSpace(textBox8.Text) == true)
             {
-                //MessageBox.Show("Fill all three fields or leave them all empty.");
-
                 String totalItemsName = null;
                 for (int i = 0; i <= totalList; i++)
                 {
@@ -240,12 +240,9 @@ namespace SemesterDemo
                 SqlConnection conn = new SqlConnection(ConnectionString);
                 SqlCommand sqlCmd = new SqlCommand(sql, conn);
 
-                //DataTable dt = new DataTable();
-
                 sqlCmd.Connection.Open();
                 sqlCmd.ExecuteNonQuery();
                 sqlCmd.Dispose();
-                //dataGridView1.DataSource = dt;
                 sqlCmd.Connection.Close();
                 conn.Close();
                 MessageBox.Show("Successfully inserted new transaction!");
@@ -412,7 +409,16 @@ namespace SemesterDemo
         private void button9_Click(object sender, EventArgs e)
         {
             Form1 F = new Form1();
+            F.StartPosition = FormStartPosition.CenterParent;
             F.ShowDialog();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            dataGridView2.Rows.Clear();
+            dataGridView2.Refresh();
+            textBox4.Text = "0";
+            total = 0;
         }
     }
 }

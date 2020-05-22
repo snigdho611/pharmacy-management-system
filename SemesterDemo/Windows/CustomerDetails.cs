@@ -16,12 +16,14 @@ namespace SemesterDemo.Windows
     {
         public int totalList;
         public String totalItemsName;
+        public String finalPrice;
 
-        public CustomerDetails(int totalList, String totalItemsName)
+        public CustomerDetails(int totalList, String totalItemsName, String finalPrice)
         {
             InitializeComponent();
             this.totalList = totalList;
             this.totalItemsName = totalItemsName;
+            this.finalPrice = finalPrice;
         }
 
         public CustomerDetails()
@@ -62,14 +64,15 @@ namespace SemesterDemo.Windows
                 cmd_command.ExecuteNonQuery();
                 nameCD = textBoxName.Text;
                 PhoneNoCD = textBoxPhoneNo.Text;
-                this.invoicePrint();
+                this.invoicePrint(finalPrice);
+                
                 Receipt r = new Receipt();
                 r.Show();
 
             }
         }
 
-        public void invoicePrint()
+        public void invoicePrint(string finalPrice)
         {
             DateTime DT;
             DT = DateTime.Now;
@@ -92,7 +95,7 @@ namespace SemesterDemo.Windows
                 writer.WriteLine(totalItemsName);
 
                 writer.WriteLine("Customer ID: " + Convert.ToString(dtTemp.Rows[0][0]));
-                //writer.WriteLine("Total Price: " + r.labelTPR.Text);
+                writer.WriteLine("Total Price: " + finalPrice);
                 writer.WriteLine(DT.ToString("dd/MM/yyyy HH:mm:ss"));
             }
         }

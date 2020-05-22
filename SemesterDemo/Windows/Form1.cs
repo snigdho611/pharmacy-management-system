@@ -145,7 +145,6 @@ namespace SemesterDemo.Windows
             {
                 
                 int totalList = dataGridViewCart.Rows.Count - 1;
-                //MessageBox.Show(Convert.ToString(totalList));
 
                 String totalItemsName = null;
                 for (int i = 0; i < totalList; i++)
@@ -154,7 +153,7 @@ namespace SemesterDemo.Windows
                 }
 
                 finalPrice = (TotalPrice.ToString());
-                CustomerDetails cd = new CustomerDetails(totalList, totalItemsName);
+                CustomerDetails cd = new CustomerDetails(totalList, totalItemsName, finalPrice);
                 cd.Show();
             }
             else
