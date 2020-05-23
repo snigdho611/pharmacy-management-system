@@ -1,0 +1,7 @@
+Product     |     Price      |
+Benadryl x 2      |      40
+ x       |      
+Customer ID: 2
+Total Price: 40
+23/05/2020 00:32:35
+Billed by: 

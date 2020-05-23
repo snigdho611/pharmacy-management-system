@@ -1,0 +1,8 @@
+Product     |     Price      |
+Napa 50mg x 3      |      90
+Panadol x 2      |      100
+ x       |      
+Customer ID: 
+Total Price: 190
+23/05/2020 00:23:31
+Billed by: 

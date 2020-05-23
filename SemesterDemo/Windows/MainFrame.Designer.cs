@@ -65,6 +65,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.catalogBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -74,7 +75,7 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catalogueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SAFDataSet)).BeginInit();
@@ -236,6 +237,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.textBox8);
             this.panel2.Controls.Add(this.label13);
@@ -260,7 +262,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(405, 81);
+            this.label14.Location = new System.Drawing.Point(399, 151);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(80, 30);
             this.label14.TabIndex = 25;
@@ -268,7 +270,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(423, 55);
+            this.textBox8.Location = new System.Drawing.Point(417, 125);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(45, 20);
             this.textBox8.TabIndex = 24;
@@ -435,6 +437,17 @@
             this.panel4.Size = new System.Drawing.Size(454, 248);
             this.panel4.TabIndex = 15;
             // 
+            // button10
+            // 
+            this.button10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Location = new System.Drawing.Point(30, 216);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(89, 27);
+            this.button10.TabIndex = 17;
+            this.button10.Text = "Refresh";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -513,16 +526,16 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button10
+            // button8
             // 
-            this.button10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(30, 216);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(89, 27);
-            this.button10.TabIndex = 17;
-            this.button10.Text = "Refresh";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(377, 31);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(102, 27);
+            this.button8.TabIndex = 14;
+            this.button8.Text = "Transactions";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click_1);
             // 
             // MainFrame
             // 
@@ -627,5 +640,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button8;
     }
 }

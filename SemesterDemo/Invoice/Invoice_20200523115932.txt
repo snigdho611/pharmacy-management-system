@@ -1,0 +1,8 @@
+Product     |     Price      |
+Sergel x 5      |      300
+Ethanol x 2      |      60
+ x       |      
+Customer ID: 
+Total Price: 360
+23/05/2020 11:59:32
+Billed by: Abir-Al-Arafat

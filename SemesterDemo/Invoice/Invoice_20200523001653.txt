@@ -1,0 +1,6 @@
+Product     |     Price      |
+Aspirin 50mg x 3      |      30
+Customer ID: 
+Total Price: 30
+23/05/2020 00:16:53
+Billed by: 

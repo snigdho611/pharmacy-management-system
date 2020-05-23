@@ -1,0 +1,8 @@
+Product     |     Price      |
+Napa 50mg x 5      |      150
+Hexisol x 3      |      90
+ x       |      
+Customer ID: 
+Total Price: 240
+23/05/2020 11:37:15
+Billed by: Snigdho Dip Howlader

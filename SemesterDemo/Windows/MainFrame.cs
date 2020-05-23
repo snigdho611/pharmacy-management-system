@@ -227,7 +227,12 @@ namespace SemesterDemo
             DateTime DT;
             DT = DateTime.Now;
             int totalList = dataGridView2.Rows.Count-1;
-            if ((String.IsNullOrWhiteSpace(textBox5.Text) == true || String.IsNullOrWhiteSpace(textBox6.Text) == true || String.IsNullOrWhiteSpace(textBox7.Text) == true) && String.IsNullOrWhiteSpace(textBox8.Text) == true)
+            if (Convert.ToInt32(totalList) <= 0)
+            {
+                MessageBox.Show("You didn't select products!");
+
+            }
+            else if ((String.IsNullOrWhiteSpace(textBox5.Text) == true || String.IsNullOrWhiteSpace(textBox6.Text) == true || String.IsNullOrWhiteSpace(textBox7.Text) == true) && String.IsNullOrWhiteSpace(textBox8.Text) == true)
             {
                 String totalItemsName = null;
                 for (int i = 0; i <= totalList; i++)
@@ -252,7 +257,7 @@ namespace SemesterDemo
                 {
                     writer.WriteLine("Product     |     " + "Price      |");
 
-                    for (int i = 0; i <= totalList; i++)
+                    for (int i = 0; i < totalList; i++)
                     {
 
                         writer.WriteLine(Convert.ToString(dataGridView2["Column2", i].Value) + " x " +
@@ -264,13 +269,10 @@ namespace SemesterDemo
                     writer.WriteLine(DT.ToString("dd/MM/yyyy HH:mm:ss"));
                     writer.WriteLine("Billed by: " + textBox1.Text);
                 }
+
+
             }
-            /*else if (String.IsNullOrWhiteSpace(textBox5.Text) == false && String.IsNullOrWhiteSpace(textBox6.Text) == false && String.IsNullOrWhiteSpace(textBox7.Text) == false)
-            {
-                MessageBox.Show("Entered");
 
-
-            }*/
             else if ((String.IsNullOrWhiteSpace(textBox5.Text) == true || String.IsNullOrWhiteSpace(textBox6.Text) == true || String.IsNullOrWhiteSpace(textBox7.Text) == true) && String.IsNullOrWhiteSpace(textBox8.Text) == false)
             {
                 String totalItemsName = null;
@@ -394,10 +396,10 @@ namespace SemesterDemo
 
                     }
                 }
-                if (Convert.ToInt32(totalList) <= 0)
-                {
-                    MessageBox.Show("You didn't select products!");
-                }
+            }
+            else if ((String.IsNullOrWhiteSpace(textBox5.Text) == false || String.IsNullOrWhiteSpace(textBox6.Text) == false || String.IsNullOrWhiteSpace(textBox7.Text) == false) && String.IsNullOrWhiteSpace(textBox8.Text) == false)
+            {
+                MessageBox.Show("Invalid, remove Customer ID field for new user!");
             }
         }
 
@@ -419,6 +421,13 @@ namespace SemesterDemo
             dataGridView2.Refresh();
             textBox4.Text = "0";
             total = 0;
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            TransactionTable T = new TransactionTable();
+            T.StartPosition = FormStartPosition.CenterParent;
+            T.ShowDialog();
         }
     }
 }

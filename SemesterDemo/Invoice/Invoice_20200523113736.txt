@@ -1,0 +1,8 @@
+Product     |     Price      |
+Benadryl x 3      |      60
+Sergel x 5      |      300
+ x       |      
+Customer ID: 3
+Total Price: 360
+23/05/2020 11:37:36
+Billed by: Snigdho Dip Howlader
