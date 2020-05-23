@@ -22,7 +22,7 @@ namespace SemesterDemo.Windows
         {
             if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text))
             {
-                MessageBox.Show("One or more of the fields is empty!");
+                MessageBox.Show("Item, stock and price must be entered!");
             }
             else
             {

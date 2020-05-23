@@ -66,6 +66,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_SAFDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB_SAFDataSet2.cs">
+      <DependentUpon>DB_SAFDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DB_SAFDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
