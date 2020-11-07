@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Access\DataAccess.cs" />
     <Compile Include="Entities\Catalog.cs" />
     <Compile Include="Entities\Transactions.cs" />
     <Compile Include="Entities\UserLogIn.cs" />
@@ -195,6 +196,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DB_SAF.mdf</DependentUpon>
     </Content>
+    <Content Include="Images\icon.ico" />
+    <Content Include="Images\icon.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
