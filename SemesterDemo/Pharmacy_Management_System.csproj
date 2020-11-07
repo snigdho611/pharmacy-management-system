@@ -64,99 +64,99 @@
     <Compile Include="Entities\Catalog.cs" />
     <Compile Include="Entities\Transactions.cs" />
     <Compile Include="Entities\UserLogIn.cs" />
-    <Compile Include="Windows\CustomerDetails.cs">
+    <Compile Include="Forms\CustomerDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\CustomerDetails.Designer.cs">
+    <Compile Include="Forms\CustomerDetails.Designer.cs">
       <DependentUpon>CustomerDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\EmployeeDetails.cs">
+    <Compile Include="Forms\EmployeeDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\EmployeeDetails.Designer.cs">
+    <Compile Include="Forms\EmployeeDetails.Designer.cs">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Form1.cs">
+    <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\Form1.Designer.cs">
+    <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Receipt.cs">
+    <Compile Include="Forms\Receipt.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\Receipt.Designer.cs">
+    <Compile Include="Forms\Receipt.Designer.cs">
       <DependentUpon>Receipt.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\TransactionTable.cs">
+    <Compile Include="Forms\TransactionTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\TransactionTable.Designer.cs">
+    <Compile Include="Forms\TransactionTable.Designer.cs">
       <DependentUpon>TransactionTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\UpdatePassword.cs">
+    <Compile Include="Forms\UpdatePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\UpdatePassword.Designer.cs">
+    <Compile Include="Forms\UpdatePassword.Designer.cs">
       <DependentUpon>UpdatePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\NewItem.cs">
+    <Compile Include="Forms\NewItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\NewItem.Designer.cs">
+    <Compile Include="Forms\NewItem.Designer.cs">
       <DependentUpon>NewItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\MainFrame.cs">
+    <Compile Include="Forms\MainFrame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\MainFrame.Designer.cs">
+    <Compile Include="Forms\MainFrame.Designer.cs">
       <DependentUpon>MainFrame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\LogIn.cs">
+    <Compile Include="Forms\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\LogIn.Designer.cs">
+    <Compile Include="Forms\LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Windows\UpdateItem.cs">
+    <Compile Include="Forms\UpdateItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\UpdateItem.Designer.cs">
+    <Compile Include="Forms\UpdateItem.Designer.cs">
       <DependentUpon>UpdateItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\UserReg.cs">
+    <Compile Include="Forms\UserReg.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\UserReg.Designer.cs">
+    <Compile Include="Forms\UserReg.Designer.cs">
       <DependentUpon>UserReg.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Windows\CustomerDetails.resx">
+    <EmbeddedResource Include="Forms\CustomerDetails.resx">
       <DependentUpon>CustomerDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\EmployeeDetails.resx">
+    <EmbeddedResource Include="Forms\EmployeeDetails.resx">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Form1.resx">
+    <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Receipt.resx">
+    <EmbeddedResource Include="Forms\Receipt.resx">
       <DependentUpon>Receipt.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\TransactionTable.resx">
+    <EmbeddedResource Include="Forms\TransactionTable.resx">
       <DependentUpon>TransactionTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\UpdatePassword.resx">
+    <EmbeddedResource Include="Forms\UpdatePassword.resx">
       <DependentUpon>UpdatePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\NewItem.resx">
+    <EmbeddedResource Include="Forms\NewItem.resx">
       <DependentUpon>NewItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\LogIn.resx">
+    <EmbeddedResource Include="Forms\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\MainFrame.resx">
+    <EmbeddedResource Include="Forms\MainFrame.resx">
       <DependentUpon>MainFrame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -168,10 +168,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Windows\UpdateItem.resx">
+    <EmbeddedResource Include="Forms\UpdateItem.resx">
       <DependentUpon>UpdateItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\UserReg.resx">
+    <EmbeddedResource Include="Forms\UserReg.resx">
       <DependentUpon>UserReg.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
