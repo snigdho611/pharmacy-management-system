@@ -27,14 +27,14 @@ namespace SemesterDemo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(textBox1.Text)|| string.IsNullOrWhiteSpace(textBox2.Text))
+            if(string.IsNullOrWhiteSpace(txtUsername.Text)|| string.IsNullOrWhiteSpace(txtPass.Text))
             {
                 MessageBox.Show("Please enter a valid username and password!");
             }
             else
             {
                 String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
-                string sql = "select * from UserLogIn where id = '" + textBox1.Text + "'AND password = '" + textBox2.Text + "';";
+                string sql = "select * from UserLogIn where id = '" + txtUsername.Text + "'AND password = '" + txtPass.Text + "';";
 
                 SqlConnection conn = new SqlConnection(ConnectionString);
                 SqlCommand sqlCmd = new SqlCommand(sql, conn);
@@ -73,6 +73,38 @@ namespace SemesterDemo
             UR.StartPosition = FormStartPosition.CenterScreen;
             UR.ShowDialog();
             
+        }
+
+        private void usernameFocus(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "Enter username here")
+            {
+                txtUsername.Text = null;
+                txtUsername.ForeColor = System.Drawing.Color.Black;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtPass.Text) == true)
+            {
+                txtPass.PasswordChar = '\0';
+                txtPass.ForeColor = System.Drawing.Color.DimGray;
+                txtPass.Text = "Enter password here";
+            }
+        }
+
+        private void passwordFocus(object sender, EventArgs e)
+        {
+            if (txtPass.Text == "Enter password here")
+            {
+                txtPass.Text = null;
+                txtPass.ForeColor = System.Drawing.Color.Black;
+                txtPass.PasswordChar = '•';
+            }
+
+            if (String.IsNullOrWhiteSpace(txtUsername.Text) == true)
+            {
+                txtUsername.ForeColor = System.Drawing.Color.DimGray;
+                txtUsername.Text = "Enter username here";
+            }
         }
     }
 }
