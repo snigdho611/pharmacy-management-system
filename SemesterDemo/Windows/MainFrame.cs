@@ -23,7 +23,6 @@ namespace SemesterDemo
         private void MainFrame_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dB_SAFDataSet.Catalogue' table. You can move, or remove it, as needed.
-            this.catalogueTableAdapter.Fill(this.dB_SAFDataSet.Catalogue);
         }
 
         private void AddItem_Click(object sender, EventArgs e)

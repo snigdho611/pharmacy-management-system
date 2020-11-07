@@ -36,12 +36,9 @@
             this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datetimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.transactionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_SAFDataSet4 = new SemesterDemo.DB_SAFDataSet4();
-            this.transactionsTableAdapter = new SemesterDemo.DB_SAFDataSet4TableAdapters.TransactionsTableAdapter();
             this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.transactionsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SAFDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -90,21 +87,6 @@
             this.datetimeDataGridViewTextBoxColumn.DataPropertyName = "datetime";
             this.datetimeDataGridViewTextBoxColumn.HeaderText = "datetime";
             this.datetimeDataGridViewTextBoxColumn.Name = "datetimeDataGridViewTextBoxColumn";
-            // 
-            // transactionsBindingSource
-            // 
-            this.transactionsBindingSource.DataMember = "Transactions";
-            this.transactionsBindingSource.DataSource = this.dB_SAFDataSet4;
-            // 
-            // dB_SAFDataSet4
-            // 
-            this.dB_SAFDataSet4.DataSetName = "DB_SAFDataSet4";
-            this.dB_SAFDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // transactionsTableAdapter
-            // 
-            this.transactionsTableAdapter.ClearBeforeFill = true;
-            // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -128,7 +110,6 @@
             this.Load += new System.EventHandler(this.TransactionTable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.transactionsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SAFDataSet4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,9 +117,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private DB_SAFDataSet4 dB_SAFDataSet4;
+        
         private System.Windows.Forms.BindingSource transactionsBindingSource;
-        private DB_SAFDataSet4TableAdapters.TransactionsTableAdapter transactionsTableAdapter;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cusIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn itemsDataGridViewTextBoxColumn;

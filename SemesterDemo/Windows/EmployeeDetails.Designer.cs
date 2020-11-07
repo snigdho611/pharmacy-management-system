@@ -31,9 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.userLogInBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_SAFDataSet3 = new SemesterDemo.DB_SAFDataSet3();
+            
             this.button1 = new System.Windows.Forms.Button();
-            this.userLogInTableAdapter = new SemesterDemo.DB_SAFDataSet3TableAdapters.UserLogInTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -41,7 +40,6 @@
             this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userLogInBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SAFDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -55,12 +53,6 @@
             // userLogInBindingSource
             // 
             this.userLogInBindingSource.DataMember = "UserLogIn";
-            this.userLogInBindingSource.DataSource = this.dB_SAFDataSet3;
-            // 
-            // dB_SAFDataSet3
-            // 
-            this.dB_SAFDataSet3.DataSetName = "DB_SAFDataSet3";
-            this.dB_SAFDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button1
             // 
@@ -72,10 +64,6 @@
             this.button1.Text = "Show All Employee";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // userLogInTableAdapter
-            // 
-            this.userLogInTableAdapter.ClearBeforeFill = true;
             // 
             // button2
             // 
@@ -149,7 +137,6 @@
             this.Load += new System.EventHandler(this.EmployeeDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userLogInBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SAFDataSet3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -158,9 +145,9 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private DB_SAFDataSet3 dB_SAFDataSet3;
+        
         private System.Windows.Forms.BindingSource userLogInBindingSource;
-        private DB_SAFDataSet3TableAdapters.UserLogInTableAdapter userLogInTableAdapter;
+        
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;

@@ -20,7 +20,6 @@ namespace SemesterDemo.Windows
         private void TransactionTable_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dB_SAFDataSet4.Transactions' table. You can move, or remove it, as needed.
-            this.transactionsTableAdapter.Fill(this.dB_SAFDataSet4.Transactions);
 
         }
 

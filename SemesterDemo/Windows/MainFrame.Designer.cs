@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.catalogueBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_SAFDataSet = new SemesterDemo.DB_SAFDataSet();
-            this.catalogueTableAdapter = new SemesterDemo.DB_SAFDataSetTableAdapters.CatalogueTableAdapter();
             this.AddItem = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -78,7 +76,6 @@
             this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catalogueBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SAFDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -98,16 +95,6 @@
             // catalogueBindingSource
             // 
             this.catalogueBindingSource.DataMember = "Catalogue";
-            this.catalogueBindingSource.DataSource = this.dB_SAFDataSet;
-            // 
-            // dB_SAFDataSet
-            // 
-            this.dB_SAFDataSet.DataSetName = "DB_SAFDataSet";
-            this.dB_SAFDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // catalogueTableAdapter
-            // 
-            this.catalogueTableAdapter.ClearBeforeFill = true;
             // 
             // AddItem
             // 
@@ -556,7 +543,6 @@
             this.Load += new System.EventHandler(this.MainFrame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.catalogueBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SAFDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -592,9 +578,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private DB_SAFDataSet dB_SAFDataSet;
         private System.Windows.Forms.BindingSource catalogueBindingSource;
-        private DB_SAFDataSetTableAdapters.CatalogueTableAdapter catalogueTableAdapter;
         private System.Windows.Forms.Button AddItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

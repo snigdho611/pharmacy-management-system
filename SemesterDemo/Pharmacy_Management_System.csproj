@@ -61,34 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB_SAFDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DB_SAFDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DB_SAFDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DB_SAFDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DB_SAFDataSet2.cs">
-      <DependentUpon>DB_SAFDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DB_SAFDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DB_SAFDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DB_SAFDataSet3.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DB_SAFDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DB_SAFDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DB_SAFDataSet4.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Entities\Catalog.cs" />
     <Compile Include="Entities\Transactions.cs" />
     <Compile Include="Entities\UserLogIn.cs" />
@@ -202,61 +174,6 @@
     <EmbeddedResource Include="Windows\UserReg.resx">
       <DependentUpon>UserReg.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DB_SAFDataSet.xsc">
-      <DependentUpon>DB_SAFDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DB_SAFDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DB_SAFDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DB_SAFDataSet.xss">
-      <DependentUpon>DB_SAFDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DB_SAFDataSet1.xsc">
-      <DependentUpon>DB_SAFDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DB_SAFDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DB_SAFDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DB_SAFDataSet1.xss">
-      <DependentUpon>DB_SAFDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DB_SAFDataSet2.xsc">
-      <DependentUpon>DB_SAFDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="DB_SAFDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DB_SAFDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DB_SAFDataSet2.xss">
-      <DependentUpon>DB_SAFDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="DB_SAFDataSet3.xsc">
-      <DependentUpon>DB_SAFDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="DB_SAFDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DB_SAFDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DB_SAFDataSet3.xss">
-      <DependentUpon>DB_SAFDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="DB_SAFDataSet4.xsc">
-      <DependentUpon>DB_SAFDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="DB_SAFDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DB_SAFDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DB_SAFDataSet4.xss">
-      <DependentUpon>DB_SAFDataSet4.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

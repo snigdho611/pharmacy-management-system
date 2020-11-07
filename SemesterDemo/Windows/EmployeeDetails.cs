@@ -22,7 +22,6 @@ namespace SemesterDemo.Windows
         private void EmployeeDetails_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dB_SAFDataSet3.UserLogIn' table. You can move, or remove it, as needed.
-            this.userLogInTableAdapter.Fill(this.dB_SAFDataSet3.UserLogIn);
 
         }
 
