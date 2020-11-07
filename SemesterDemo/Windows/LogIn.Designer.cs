@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
             this.button1 = new System.Windows.Forms.Button();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
@@ -116,6 +117,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pharmacy Management System";
