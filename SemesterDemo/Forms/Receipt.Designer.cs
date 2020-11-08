@@ -41,9 +41,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(238, 70);
+            this.label1.Location = new System.Drawing.Point(67, 60);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 25);
+            this.label1.Size = new System.Drawing.Size(420, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thank You For Purchasing!!";
             // 
@@ -51,9 +52,10 @@
             // 
             this.label_NameR.AutoSize = true;
             this.label_NameR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NameR.Location = new System.Drawing.Point(263, 149);
+            this.label_NameR.Location = new System.Drawing.Point(104, 181);
+            this.label_NameR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_NameR.Name = "label_NameR";
-            this.label_NameR.Size = new System.Drawing.Size(52, 18);
+            this.label_NameR.Size = new System.Drawing.Size(84, 29);
             this.label_NameR.TabIndex = 1;
             this.label_NameR.Text = "Name:";
             // 
@@ -61,9 +63,10 @@
             // 
             this.label_PhoneNoR.AutoSize = true;
             this.label_PhoneNoR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PhoneNoR.Location = new System.Drawing.Point(243, 183);
+            this.label_PhoneNoR.Location = new System.Drawing.Point(74, 234);
+            this.label_PhoneNoR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_PhoneNoR.Name = "label_PhoneNoR";
-            this.label_PhoneNoR.Size = new System.Drawing.Size(79, 18);
+            this.label_PhoneNoR.Size = new System.Drawing.Size(127, 29);
             this.label_PhoneNoR.TabIndex = 1;
             this.label_PhoneNoR.Text = "Phone No:";
             // 
@@ -71,9 +74,10 @@
             // 
             this.label_TPR.AutoSize = true;
             this.label_TPR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TPR.Location = new System.Drawing.Point(240, 220);
+            this.label_TPR.Location = new System.Drawing.Point(70, 290);
+            this.label_TPR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_TPR.Name = "label_TPR";
-            this.label_TPR.Size = new System.Drawing.Size(83, 18);
+            this.label_TPR.Size = new System.Drawing.Size(136, 29);
             this.label_TPR.TabIndex = 1;
             this.label_TPR.Text = "Total Price:";
             // 
@@ -81,9 +85,10 @@
             // 
             this.labelTPR.AutoSize = true;
             this.labelTPR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTPR.Location = new System.Drawing.Point(329, 220);
+            this.labelTPR.Location = new System.Drawing.Point(204, 290);
+            this.labelTPR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTPR.Name = "labelTPR";
-            this.labelTPR.Size = new System.Drawing.Size(27, 18);
+            this.labelTPR.Size = new System.Drawing.Size(45, 29);
             this.labelTPR.TabIndex = 1;
             this.labelTPR.Text = "TP";
             // 
@@ -91,9 +96,10 @@
             // 
             this.labelPNR.AutoSize = true;
             this.labelPNR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPNR.Location = new System.Drawing.Point(329, 183);
+            this.labelPNR.Location = new System.Drawing.Point(204, 234);
+            this.labelPNR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPNR.Name = "labelPNR";
-            this.labelPNR.Size = new System.Drawing.Size(29, 18);
+            this.labelPNR.Size = new System.Drawing.Size(47, 29);
             this.labelPNR.TabIndex = 1;
             this.labelPNR.Text = "PN";
             // 
@@ -101,17 +107,18 @@
             // 
             this.labelNameR.AutoSize = true;
             this.labelNameR.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameR.Location = new System.Drawing.Point(329, 149);
+            this.labelNameR.Location = new System.Drawing.Point(204, 181);
+            this.labelNameR.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelNameR.Name = "labelNameR";
-            this.labelNameR.Size = new System.Drawing.Size(19, 18);
+            this.labelNameR.Size = new System.Drawing.Size(31, 29);
             this.labelNameR.TabIndex = 1;
             this.labelNameR.Text = "N";
             // 
             // Receipt
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 284);
+            this.ClientSize = new System.Drawing.Size(579, 437);
             this.Controls.Add(this.labelTPR);
             this.Controls.Add(this.label_TPR);
             this.Controls.Add(this.labelPNR);
@@ -119,6 +126,7 @@
             this.Controls.Add(this.labelNameR);
             this.Controls.Add(this.label_NameR);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Receipt";
             this.Text = "Receipt";
             this.Load += new System.EventHandler(this.Receipt_Load);
