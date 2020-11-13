@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SemesterDemo.Access;
 
 namespace SemesterDemo
 {
@@ -22,7 +23,14 @@ namespace SemesterDemo
 
         private void MainFrame_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB_SAFDataSet.Catalogue' table. You can move, or remove it, as needed.
+            
+            Access.DataAccess access = new Access.DataAccess();
+            access.SqlCmd = new SqlCommand("select * from catalog", access.SqlCon);
+            access.SqlDA = new SqlDataAdapter(access.SqlCmd);
+            DataTable table = new DataTable();
+            access.SqlDA.Fill(table);
+            mainGridView.DataSource = table;
+            
         }
 
         private void AddItem_Click(object sender, EventArgs e)
@@ -79,7 +87,7 @@ namespace SemesterDemo
             sqlCmd.Connection.Open();
             dtCatalog.Load(sqlCmd.ExecuteReader());
             dtmain.Load(sqlCmd.ExecuteReader());
-            dataGridView1.DataSource = dtCatalog;
+            mainGridView.DataSource = dtCatalog;
             sqlCmd.Connection.Close();
         }
 
@@ -164,8 +172,8 @@ namespace SemesterDemo
         {
             try
             {
-                Int32 selectedRowCount = dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
-                Int32 selectedRowIndex = dataGridView1.CurrentCell.RowIndex;
+                Int32 selectedRowCount = mainGridView.Rows.GetRowCount(DataGridViewElementStates.Selected);
+                Int32 selectedRowIndex = mainGridView.CurrentCell.RowIndex;
                 if (selectedRowCount > 1)
                 {
                     MessageBox.Show("You have selected multiple rows. Please select a single item!");

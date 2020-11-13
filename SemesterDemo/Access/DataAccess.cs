@@ -12,7 +12,7 @@ namespace SemesterDemo.Access
         private String ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Snigdho\\Github\\Pharmacy_Management_System\\SemesterDemo\\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
 
         private SqlConnection sqlCon;
-        private SqlCommand sqlCom;
+        private SqlCommand sqlCmd;
         private SqlDataAdapter sqlDataAdapter;
 
         public SqlConnection SqlCon
@@ -21,16 +21,21 @@ namespace SemesterDemo.Access
             get { return this.sqlCon; }
         }
 
-        public SqlCommand SqlCom
+        public SqlCommand SqlCmd
         {
-            set { this.sqlCom = value; }
-            get { return this.sqlCom; }
+            set { this.sqlCmd = value; }
+            get { return this.sqlCmd; }
         }
 
-        public SqlDataAdapter SqlDataAdapter
+        public SqlDataAdapter SqlDA
         {
             set { this.sqlDataAdapter = value; }
             get { return this.sqlDataAdapter; }
+        }
+
+        public DataAccess()
+        {
+            sqlCon = new SqlConnection(ConnectionString);
         }
     }
 }
