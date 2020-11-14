@@ -33,8 +33,8 @@ namespace SemesterDemo
             }
             else
             {
-                String ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Snigdho\\Github\\PharmacyManagementSystem-University\\SemesterDemo\\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
-                string sql = "select * from UserLogIn where id = '" + txtUsername.Text + "'AND password = '" + txtPass.Text + "';";
+                String ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Snigdho\\Github\\Pharmacy_Management_System\\SemesterDemo\\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
+                string sql = "select * from admin where id = '" + txtUsername.Text + "'AND password = '" + txtPass.Text + "';";
 
                 SqlConnection conn = new SqlConnection(ConnectionString);
                 SqlCommand sqlCmd = new SqlCommand(sql, conn);
