@@ -85,6 +85,7 @@ namespace SemesterDemo.Windows
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.Plum;
             this.textBox1.Location = new System.Drawing.Point(111, 56);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(161, 20);
@@ -92,6 +93,7 @@ namespace SemesterDemo.Windows
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.Plum;
             this.textBox2.Location = new System.Drawing.Point(111, 93);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(161, 20);
@@ -99,6 +101,7 @@ namespace SemesterDemo.Windows
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.Color.Plum;
             this.textBox3.Location = new System.Drawing.Point(111, 132);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(161, 20);
@@ -106,6 +109,7 @@ namespace SemesterDemo.Windows
             // 
             // textBox4
             // 
+            this.textBox4.BackColor = System.Drawing.Color.Plum;
             this.textBox4.Location = new System.Drawing.Point(111, 173);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(161, 20);
@@ -113,24 +117,30 @@ namespace SemesterDemo.Windows
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Indigo;
             this.button1.Location = new System.Drawing.Point(71, 257);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 28);
             this.button1.TabIndex = 8;
             this.button1.Text = "Update Item";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.Indigo;
             this.button2.Location = new System.Drawing.Point(199, 257);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(78, 28);
             this.button2.TabIndex = 9;
             this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // UpdateItem

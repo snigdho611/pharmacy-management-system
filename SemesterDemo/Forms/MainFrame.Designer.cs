@@ -86,6 +86,7 @@
             // 
             // mainGridView
             // 
+            this.mainGridView.BackgroundColor = System.Drawing.Color.Thistle;
             this.mainGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mainGridView.Location = new System.Drawing.Point(528, 12);
             this.mainGridView.Name = "mainGridView";
@@ -511,6 +512,7 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Thistle;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,

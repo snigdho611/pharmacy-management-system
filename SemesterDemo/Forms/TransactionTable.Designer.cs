@@ -48,13 +48,16 @@
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.Color.Indigo;
             this.button4.Location = new System.Drawing.Point(485, 411);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(70, 27);
             this.button4.TabIndex = 5;
             this.button4.Text = "Close";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // TransactionTable
