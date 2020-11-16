@@ -1,9 +1,0 @@
-Product     |     Price      |
-Histacine x 3      |      180
-Eno x 2      |      10
-Pudinhara x 1      |      10
- x       |      
-Customer ID: 
-Total Price: 200
-23/05/2020 00:31:24
-Billed by: 

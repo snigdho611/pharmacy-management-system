@@ -1,7 +1,0 @@
-Product     |     Price      |
-Napa 50mg x 3      |      90
- x       |      
-Customer ID: 
-Total Price: 90
-23/05/2020 00:18:51
-Billed by: 

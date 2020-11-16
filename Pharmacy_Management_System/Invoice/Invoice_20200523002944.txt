@@ -1,0 +1,8 @@
+Product     |     Price      |
+Sergel x 3      |      180
+Pudinhara x 4      |      40
+ x       |      
+Customer ID: 
+Total Price: 220
+23/05/2020 00:29:44
+Billed by: 

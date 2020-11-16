@@ -1,0 +1,7 @@
+Product     |     Price      |
+Hexisol x 5      |      150
+Sergel x 2      |      120
+Customer ID: 
+Total Price: 270
+21/05/2020 22:52:15
+Billed by: 

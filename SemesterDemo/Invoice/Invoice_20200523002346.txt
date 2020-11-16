@@ -1,7 +1,0 @@
-Product     |     Price      |
-Histacine x 5      |      300
- x       |      
-Customer ID: 
-Total Price: 490
-23/05/2020 00:23:46
-Billed by: 

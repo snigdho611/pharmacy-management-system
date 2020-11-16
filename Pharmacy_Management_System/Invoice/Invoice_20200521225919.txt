@@ -1,0 +1,7 @@
+Product     |     Price      |
+Hexisol x 5      |      150
+Aspirin 50mg x 2      |      20
+Customer ID: 
+Total Price: 170
+21/05/2020 22:59:19
+Billed by: 

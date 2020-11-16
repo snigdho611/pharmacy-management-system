@@ -1,0 +1,9 @@
+Product     |     Price      |
+Panadol x 12      |      600
+Pudinhara x 2      |      20
+Pudinhara x 2      |      20
+ x       |      
+Customer ID: 
+Total Price: 640
+23/05/2020 00:31:06
+Billed by: 

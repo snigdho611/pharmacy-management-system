@@ -1,0 +1,5 @@
+Product     |     Price      |
+Paracetamol 50mg x 2
+
+Customer ID: 20
+22/05/2020 20:41:02
