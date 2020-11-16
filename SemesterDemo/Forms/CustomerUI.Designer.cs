@@ -112,12 +112,16 @@
             // 
             // button1A2C
             // 
+            this.button1A2C.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1A2C.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1A2C.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1A2C.ForeColor = System.Drawing.Color.Indigo;
             this.button1A2C.Location = new System.Drawing.Point(646, 85);
             this.button1A2C.Name = "button1A2C";
             this.button1A2C.Size = new System.Drawing.Size(83, 41);
             this.button1A2C.TabIndex = 1;
             this.button1A2C.Text = "Add to cart";
-            this.button1A2C.UseVisualStyleBackColor = true;
+            this.button1A2C.UseVisualStyleBackColor = false;
             this.button1A2C.Click += new System.EventHandler(this.button1A2C_Click);
             // 
             // label1Cart
@@ -215,12 +219,16 @@
             // 
             // buttonBuy
             // 
+            this.buttonBuy.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonBuy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonBuy.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonBuy.ForeColor = System.Drawing.Color.Indigo;
             this.buttonBuy.Location = new System.Drawing.Point(646, 132);
             this.buttonBuy.Name = "buttonBuy";
             this.buttonBuy.Size = new System.Drawing.Size(83, 43);
             this.buttonBuy.TabIndex = 5;
             this.buttonBuy.Text = "Buy";
-            this.buttonBuy.UseVisualStyleBackColor = true;
+            this.buttonBuy.UseVisualStyleBackColor = false;
             this.buttonBuy.Click += new System.EventHandler(this.buttonBuy_Click);
             // 
             // label_Stock
@@ -253,12 +261,16 @@
             // 
             // button_delete
             // 
+            this.button_delete.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_delete.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button_delete.ForeColor = System.Drawing.Color.Indigo;
             this.button_delete.Location = new System.Drawing.Point(401, 242);
             this.button_delete.Name = "button_delete";
             this.button_delete.Size = new System.Drawing.Size(75, 23);
             this.button_delete.TabIndex = 6;
             this.button_delete.Text = "Delete";
-            this.button_delete.UseVisualStyleBackColor = true;
+            this.button_delete.UseVisualStyleBackColor = false;
             this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
             // 
             // label_stockLeft
