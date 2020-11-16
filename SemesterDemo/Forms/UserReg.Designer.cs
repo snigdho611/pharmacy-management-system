@@ -174,6 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(372, 406);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox6);
@@ -194,6 +195,7 @@
             this.Load += new System.EventHandler(this.UserReg_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         public int privateID;
