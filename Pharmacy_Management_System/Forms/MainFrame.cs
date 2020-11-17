@@ -282,33 +282,26 @@ namespace SemesterDemo
                     totalItemsName = totalItemsName + Convert.ToString(dataGridView2["Column2", i].Value) + "x" + Convert.ToString(dataGridView2["Column3", i].Value) + " ";
                 }
 
-                String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
+                DataAccess access = new DataAccess();
                 string sql = "select * from Customer where cusid = " + textBox8.Text;
 
-                SqlConnection conn = new SqlConnection(ConnectionString);
-                SqlCommand sqlCmd = new SqlCommand(sql, conn);
+                SqlCommand sqlCmd = new SqlCommand(sql, access.SqlCon);
 
                 DataTable dtTemp = new DataTable();
 
-                sqlCmd.Connection.Open();
-                //var affectedRowCount=sqlCmd.ExecuteNonQuery();
+                access.SqlCmd.Connection.Open();
                 dtTemp.Load(sqlCmd.ExecuteReader());
 
                 if (dtTemp.Rows.Count > 0)
                 {
-                    String ConnectionString2 = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
-                    String sql2 = "insert into Transactions (cusID, items, total, datetime) values (" + textBox8.Text + ",'" + totalItemsName + "', " + textBox4.Text + ", GETDATE())";
-                    SqlConnection conn2 = new SqlConnection(ConnectionString2);
-                    SqlCommand sqlCmd2 = new SqlCommand(sql2, conn2);
-
-                    //DataTable dt = new DataTable();
+                    string sql2 = "insert into Transactions (cusID, items, total, datetime) values (" + textBox8.Text + ",'" + totalItemsName + "', " + textBox4.Text + ", GETDATE())";
+                    SqlCommand sqlCmd2 = new SqlCommand(sql2, access.SqlCon);
 
                     sqlCmd2.Connection.Open();
                     sqlCmd2.ExecuteNonQuery();
                     sqlCmd2.Dispose();
-                    //dataGridView1.DataSource = dt;
                     sqlCmd2.Connection.Close();
-                    conn2.Close();
+                    access.SqlCmd.Connection.Close();
                     MessageBox.Show("Successfully inserted new transaction!");
 
                     using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DT.ToString("yyyyMMddHHmmss") + ".txt"))
@@ -345,38 +338,28 @@ namespace SemesterDemo
 
                 MessageBox.Show("Added Customer");
 
-                String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
+                DataAccess access = new DataAccess();
                 string sql = "insert into Customer (name, email, phone, total) values('"+textBox5.Text+"','"+textBox6.Text+"','"+textBox7.Text+"',"+textBox4.Text+")";
                 string sql2 = "select top 1 cusID from Customer Order by cusID desc";
-                SqlConnection conn = new SqlConnection(ConnectionString);
-                SqlCommand sqlCmd = new SqlCommand(sql, conn);
-                SqlCommand sqlCmd2 = new SqlCommand(sql2, conn);
+                SqlCommand sqlCmd = new SqlCommand(sql, access.SqlCon);
+                SqlCommand sqlCmd2 = new SqlCommand(sql2, access.SqlCon);
 
                 DataTable dtTemp = new DataTable();
 
-                sqlCmd.Connection.Open();
-                sqlCmd.ExecuteNonQuery();
-                sqlCmd.Connection.Close();
-
-                sqlCmd2.Connection.Open();
+                access.SqlCmd.Connection.Open();
+                access.SqlCmd.ExecuteNonQuery();
                 dtTemp.Load(sqlCmd2.ExecuteReader());
-                sqlCmd2.Connection.Close();
+                access.SqlCmd.Connection.Close();
 
                 if (dtTemp.Rows.Count > 0)
                 {
-                    String ConnectionString2 = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
-                    String sql3 = "insert into Transactions (cusID, items, total, datetime) values (" + Convert.ToInt32(dtTemp.Rows[0][0]) + ",'" + totalItemsName + "', " + textBox4.Text + ", GETDATE())";
-                    SqlConnection conn3 = new SqlConnection(ConnectionString2);
-                    SqlCommand sqlCmd3 = new SqlCommand(sql3, conn3);
+                    string sql3 = "insert into Transactions (cusID, items, total, datetime) values (" + Convert.ToInt32(dtTemp.Rows[0][0]) + ",'" + totalItemsName + "', " + textBox4.Text + ", GETDATE())";
+                    access.SqlCmd = new SqlCommand(sql3, access.SqlCon);
 
-                    //DataTable dt = new DataTable();
-
-                    sqlCmd3.Connection.Open();
-                    sqlCmd3.ExecuteNonQuery();
-                    sqlCmd3.Dispose();
-                    //dataGridView1.DataSource = dt;
-                    sqlCmd3.Connection.Close();
-                    conn3.Close();
+                    access.SqlCmd.Connection.Open();
+                    access.SqlCmd.ExecuteNonQuery();
+                    access.SqlCmd.Dispose();
+                    access.SqlCmd.Connection.Close();
                     MessageBox.Show("Successfully inserted new transaction!");
 
                     using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DT.ToString("yyyyMMddHHmmss") + ".txt"))
