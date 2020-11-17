@@ -52,7 +52,7 @@ namespace SemesterDemo
                 String sql = "select * from Catalogue where id = " + textBox2.Text + ";";
                 SqlCommand sqlCmd = new SqlCommand(sql, access.SqlCon);
 
-                access.SqlCon.Connection.Open();
+                access.SqlCmd.Connection.Open();
                 dt.Load(access.SqlCmd.ExecuteReader());
                 int id = Convert.ToInt32(dt.Rows[0][0]);
                 string item = Convert.ToString(dt.Rows[0][1]);
@@ -69,8 +69,8 @@ namespace SemesterDemo
             }
         }
 
-        DataTable dt = new DataTable();
-        DataTable dtmain = new DataTable();
+        private DataTable dt = new DataTable();
+        private DataTable dtmain = new DataTable();
 
         //Show all products
         private void button1_Click(object sender, EventArgs e)
@@ -179,25 +179,24 @@ namespace SemesterDemo
 
                     DataAccess access = new DataAccess();
                     String sql = "select * from Catalogue where id = " + Convert.ToInt32(dtmain.Rows[selectedRowIndex][0]) + ";";
-                    SqlConnection conn = new SqlConnection(ConnectionString);
-                    SqlCommand sqlCmd = new SqlCommand(sql, conn);
+                    access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
-                    DataTable dtcustomer = new DataTable();
-                    sqlCmd.Connection.Open();
-                    dtcustomer.Load(sqlCmd.ExecuteReader());
+                    DataTable dtCustomer = new DataTable();
+                    access.SqlCmd.Connection.Open();
+                    dtCustomer.Load(access.SqlCmd.ExecuteReader());
 
 
-                    sqlCmd.Connection.Close();
+                    access.SqlCmd.Connection.Close();
                     int row = 0;
                     try
                     {
-                        total = total + Convert.ToInt32(dtcustomer.Rows[0][4]) * (Convert.ToInt32(textBox3.Text));
+                        total = total + Convert.ToInt32(dtCustomer.Rows[0][4]) * (Convert.ToInt32(textBox3.Text));
                         dataGridView2.Rows.Add();
                         row = dataGridView2.Rows.Count - 2;
-                        dataGridView2["Column1", row].Value = dtcustomer.Rows[0][0];
-                        dataGridView2["Column2", row].Value = dtcustomer.Rows[0][1];
+                        dataGridView2["Column1", row].Value = dtCustomer.Rows[0][0];
+                        dataGridView2["Column2", row].Value = dtCustomer.Rows[0][1];
                         dataGridView2["Column3", row].Value = textBox3.Text;
-                        dataGridView2["Column4", row].Value = Convert.ToInt32(dtcustomer.Rows[0][4]) * (Convert.ToInt32(textBox3.Text));
+                        dataGridView2["Column4", row].Value = Convert.ToInt32(dtCustomer.Rows[0][4]) * (Convert.ToInt32(textBox3.Text));
                         textBox4.Text = Convert.ToString(total);
                     }
                     catch (FormatException FE)
@@ -243,16 +242,15 @@ namespace SemesterDemo
                     totalItemsName = totalItemsName + Convert.ToString(dataGridView2["Column2", i].Value) + "x" + Convert.ToString(dataGridView2["Column3", i].Value) + " ";
                 }
 
-                String ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
-                String sql = "insert into Transactions (items, total, datetime) values ('" + totalItemsName + "', " + textBox4.Text + ", GETDATE())";
-                SqlConnection conn = new SqlConnection(ConnectionString);
-                SqlCommand sqlCmd = new SqlCommand(sql, conn);
+                DataAccess access = new DataAccess();
+                string sql = "insert into Transactions (items, total, datetime) values ('" + totalItemsName + "', " + textBox4.Text + ", GETDATE())";
+                SqlCommand sqlCmd = new SqlCommand(sql, access.SqlCon);
 
-                sqlCmd.Connection.Open();
+                access.SqlCmd.Connection.Open();
                 sqlCmd.ExecuteNonQuery();
                 sqlCmd.Dispose();
                 sqlCmd.Connection.Close();
-                conn.Close();
+                access.SqlCmd.Connection.Close();
                 MessageBox.Show("Successfully inserted new transaction!");
                 //this.Dispose();
 
