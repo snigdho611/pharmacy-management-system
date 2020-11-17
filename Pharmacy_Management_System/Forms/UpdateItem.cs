@@ -25,12 +25,9 @@ namespace SemesterDemo.Windows
                 SqlConnection conn = new SqlConnection(ConnectionString);
                 SqlCommand sqlCmd = new SqlCommand(sql, conn);
 
-                DataTable dt = new DataTable();
-
                 sqlCmd.Connection.Open();
                 sqlCmd.ExecuteNonQuery();
                 sqlCmd.Dispose();
-                //dataGridView1.DataSource = dt;
                 sqlCmd.Connection.Close();
                 conn.Close();
                 MessageBox.Show("Successfully Updated item details!");
