@@ -23,8 +23,7 @@ namespace SemesterDemo
 
         private void MainFrame_Load(object sender, EventArgs e)
         {
-            
-            Access.DataAccess access = new Access.DataAccess();
+            DataAccess access = new DataAccess();
             access.SqlCmd = new SqlCommand("select * from catalog", access.SqlCon);
             access.SqlDA = new SqlDataAdapter(access.SqlCmd);
             DataTable table = new DataTable();
@@ -49,20 +48,19 @@ namespace SemesterDemo
             }
             else
             {
-                String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
+                DataAccess access = new DataAccess();
                 String sql = "select * from Catalogue where id = " + textBox2.Text + ";";
-                SqlConnection conn = new SqlConnection(ConnectionString);
-                SqlCommand sqlCmd = new SqlCommand(sql, conn);
+                SqlCommand sqlCmd = new SqlCommand(sql, access.SqlCon);
 
-                sqlCmd.Connection.Open();
-                dt.Load(sqlCmd.ExecuteReader());
+                access.SqlCon.Connection.Open();
+                dt.Load(access.SqlCmd.ExecuteReader());
                 int id = Convert.ToInt32(dt.Rows[0][0]);
                 string item = Convert.ToString(dt.Rows[0][1]);
                 string details = Convert.ToString(dt.Rows[0][2]);
                 int stock = Convert.ToInt32(dt.Rows[0][3]);
                 int price = Convert.ToInt32(dt.Rows[0][4]);
 
-                sqlCmd.Connection.Close();
+                access.SqlCmd.Connection.Close();
 
                 UpdateItem U = new UpdateItem();
                 U.StartPosition = FormStartPosition.CenterScreen;
@@ -77,10 +75,9 @@ namespace SemesterDemo
         //Show all products
         private void button1_Click(object sender, EventArgs e)
         {
-            String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
+            DataAccess access = new DataAccess();
             String sql = "select Id as 'ID', item as 'item', details as 'details', stock as 'stock', price as 'price' from Catalogue";
-            SqlConnection conn = new SqlConnection(ConnectionString);
-            SqlCommand sqlCmd = new SqlCommand(sql, conn);
+            access.SqlCmd= new SqlCommand(sql, access.SqlCon);
 
             DataTable dtCatalog = new DataTable();
 
