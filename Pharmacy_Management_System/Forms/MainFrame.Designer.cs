@@ -90,9 +90,11 @@
             this.mainGridView.BackgroundColor = System.Drawing.Color.Thistle;
             this.mainGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mainGridView.Location = new System.Drawing.Point(528, 12);
+            this.mainGridView.MultiSelect = false;
             this.mainGridView.Name = "mainGridView";
             this.mainGridView.ReadOnly = true;
             this.mainGridView.RowHeadersWidth = 62;
+            this.mainGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mainGridView.Size = new System.Drawing.Size(543, 333);
             this.mainGridView.TabIndex = 0;
             this.mainGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainGridView_CellContentClick);
@@ -201,9 +203,9 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Indigo;
-            this.button4.Location = new System.Drawing.Point(415, 552);
+            this.button4.Location = new System.Drawing.Point(352, 552);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(89, 27);
+            this.button4.Size = new System.Drawing.Size(84, 27);
             this.button4.TabIndex = 10;
             this.button4.Text = "Log Out";
             this.button4.UseVisualStyleBackColor = false;
@@ -216,7 +218,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(15, 470);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(489, 76);
+            this.panel1.Size = new System.Drawing.Size(421, 76);
             this.panel1.TabIndex = 11;
             // 
             // button5
@@ -265,7 +267,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(15, 237);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(488, 227);
+            this.panel2.Size = new System.Drawing.Size(421, 227);
             this.panel2.TabIndex = 12;
             // 
             // button8
@@ -274,7 +276,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.Indigo;
-            this.button8.Location = new System.Drawing.Point(377, 31);
+            this.button8.Location = new System.Drawing.Point(297, 31);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(102, 27);
             this.button8.TabIndex = 14;
@@ -286,7 +288,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(399, 151);
+            this.label14.Location = new System.Drawing.Point(319, 151);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(80, 30);
             this.label14.TabIndex = 25;
@@ -294,7 +296,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(417, 125);
+            this.textBox8.Location = new System.Drawing.Point(337, 125);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(45, 20);
             this.textBox8.TabIndex = 24;
@@ -315,7 +317,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Indigo;
-            this.button7.Location = new System.Drawing.Point(402, 190);
+            this.button7.Location = new System.Drawing.Point(322, 190);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(83, 27);
             this.button7.TabIndex = 13;
@@ -569,7 +571,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Indigo;
-            this.button9.Location = new System.Drawing.Point(291, 552);
+            this.button9.Location = new System.Drawing.Point(248, 552);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(89, 40);
             this.button9.TabIndex = 16;
@@ -592,9 +594,11 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mainGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainFrame";
             this.Text = "Pharmacy Management System";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainFrame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mainGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.catalogueBindingSource)).EndInit();

@@ -70,7 +70,7 @@ namespace SemesterDemo
         private void button1_Click(object sender, EventArgs e)
         {
             DataAccess access = new DataAccess();
-            String sql = "select Id as 'ID', item as 'item', details as 'details', stock as 'stock', price as 'price' from Catalogue";
+            String sql = "select Id as 'ID', item as 'item', details as 'details', stock as 'stock', price as 'price' from catalog";
             access.SqlCmd= new SqlCommand(sql, access.SqlCon);
 
             DataTable dtCatalog = new DataTable();
@@ -172,7 +172,7 @@ namespace SemesterDemo
                 {
 
                     DataAccess access = new DataAccess();
-                    String sql = "select * from Catalogue where id = " + Convert.ToInt32(dtmain.Rows[selectedRowIndex][0]) + ";";
+                    String sql = "select * from catalog where id = " + Convert.ToInt32(dtmain.Rows[selectedRowIndex][0]) + ";";
                     access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
                     DataTable dtCustomer = new DataTable();
