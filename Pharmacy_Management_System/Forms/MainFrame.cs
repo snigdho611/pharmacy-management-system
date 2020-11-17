@@ -389,7 +389,7 @@ namespace SemesterDemo
 
         private void button8_Click(object sender, EventArgs e)
         {
-           // CustomersCart F = new CustomersCart();
+
         }
 
         private void button9_Click(object sender, EventArgs e)

@@ -25,5 +25,10 @@ namespace SemesterDemo.Windows
             labelTPR.Text = Form1.finalPrice;
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

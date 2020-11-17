@@ -43,33 +43,37 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(190, 163);
+            this.labelName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.ForeColor = System.Drawing.Color.Indigo;
+            this.labelName.Location = new System.Drawing.Point(110, 76);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(52, 18);
+            this.labelName.Size = new System.Drawing.Size(49, 19);
             this.labelName.TabIndex = 0;
             this.labelName.Text = "Name:";
             // 
             // labelPhoneNo
             // 
             this.labelPhoneNo.AutoSize = true;
-            this.labelPhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPhoneNo.Location = new System.Drawing.Point(130, 218);
+            this.labelPhoneNo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPhoneNo.ForeColor = System.Drawing.Color.Indigo;
+            this.labelPhoneNo.Location = new System.Drawing.Point(55, 130);
             this.labelPhoneNo.Name = "labelPhoneNo";
-            this.labelPhoneNo.Size = new System.Drawing.Size(112, 18);
+            this.labelPhoneNo.Size = new System.Drawing.Size(104, 19);
             this.labelPhoneNo.TabIndex = 0;
             this.labelPhoneNo.Text = "Phone Number:";
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(259, 163);
+            this.textBoxName.BackColor = System.Drawing.Color.Plum;
+            this.textBoxName.Location = new System.Drawing.Point(165, 76);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 20);
             this.textBoxName.TabIndex = 1;
             // 
             // textBoxPhoneNo
             // 
-            this.textBoxPhoneNo.Location = new System.Drawing.Point(259, 218);
+            this.textBoxPhoneNo.BackColor = System.Drawing.Color.Plum;
+            this.textBoxPhoneNo.Location = new System.Drawing.Point(165, 131);
             this.textBoxPhoneNo.Name = "textBoxPhoneNo";
             this.textBoxPhoneNo.Size = new System.Drawing.Size(100, 20);
             this.textBoxPhoneNo.TabIndex = 1;
@@ -78,10 +82,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(159, 127);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Indigo;
+            this.label1.Location = new System.Drawing.Point(65, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 18);
+            this.label1.Size = new System.Drawing.Size(77, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Price:";
             // 
@@ -89,7 +94,7 @@
             // 
             this.labelTPinCD.AutoSize = true;
             this.labelTPinCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTPinCD.Location = new System.Drawing.Point(256, 127);
+            this.labelTPinCD.Location = new System.Drawing.Point(162, 41);
             this.labelTPinCD.Name = "labelTPinCD";
             this.labelTPinCD.Size = new System.Drawing.Size(27, 18);
             this.labelTPinCD.TabIndex = 0;
@@ -97,27 +102,36 @@
             // 
             // buttonConfirm
             // 
-            this.buttonConfirm.Location = new System.Drawing.Point(259, 248);
+            this.buttonConfirm.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonConfirm.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonConfirm.ForeColor = System.Drawing.Color.Indigo;
+            this.buttonConfirm.Location = new System.Drawing.Point(118, 182);
             this.buttonConfirm.Name = "buttonConfirm";
-            this.buttonConfirm.Size = new System.Drawing.Size(100, 37);
+            this.buttonConfirm.Size = new System.Drawing.Size(100, 27);
             this.buttonConfirm.TabIndex = 2;
             this.buttonConfirm.Text = "Confirm Order";
-            this.buttonConfirm.UseVisualStyleBackColor = true;
+            this.buttonConfirm.UseVisualStyleBackColor = false;
             this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(259, 291);
+            this.buttonCancel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonCancel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonCancel.ForeColor = System.Drawing.Color.Indigo;
+            this.buttonCancel.Location = new System.Drawing.Point(118, 225);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(100, 34);
+            this.buttonCancel.Size = new System.Drawing.Size(100, 23);
             this.buttonCancel.TabIndex = 3;
             this.buttonCancel.Text = "Cancel";
-            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.UseVisualStyleBackColor = false;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(259, 189);
+            this.textBoxEmail.BackColor = System.Drawing.Color.Plum;
+            this.textBoxEmail.Location = new System.Drawing.Point(165, 102);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(100, 20);
             this.textBoxEmail.TabIndex = 5;
@@ -125,10 +139,11 @@
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(193, 189);
+            this.labelEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.ForeColor = System.Drawing.Color.Indigo;
+            this.labelEmail.Location = new System.Drawing.Point(114, 102);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(49, 18);
+            this.labelEmail.Size = new System.Drawing.Size(45, 19);
             this.labelEmail.TabIndex = 4;
             this.labelEmail.Text = "Email:";
             // 
@@ -136,7 +151,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 350);
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(326, 277);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.buttonCancel);
@@ -147,7 +163,9 @@
             this.Controls.Add(this.labelTPinCD);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "CustomerDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CustomerDetails";
             this.Load += new System.EventHandler(this.CustomerDetails_Load);
             this.ResumeLayout(false);
