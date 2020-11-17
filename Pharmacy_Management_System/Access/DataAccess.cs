@@ -9,7 +9,7 @@ namespace SemesterDemo.Access
 {
     class DataAccess
     {
-        private String ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Snigdho\\Github\\Pharmacy_Management_System\\SemesterDemo\\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
+        private String ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Snigdho\\Github\\Pharmacy_Management_System\\Pharmacy_Management_System\\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
 
         private SqlConnection sqlCon;
         private SqlCommand sqlCmd;

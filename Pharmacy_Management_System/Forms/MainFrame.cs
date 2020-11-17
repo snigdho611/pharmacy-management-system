@@ -436,5 +436,10 @@ namespace SemesterDemo
             T.StartPosition = FormStartPosition.CenterParent;
             T.ShowDialog();
         }
+
+        private void mainGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

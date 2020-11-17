@@ -90,8 +90,11 @@
             this.mainGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mainGridView.Location = new System.Drawing.Point(528, 12);
             this.mainGridView.Name = "mainGridView";
+            this.mainGridView.ReadOnly = true;
+            this.mainGridView.RowHeadersWidth = 62;
             this.mainGridView.Size = new System.Drawing.Size(543, 333);
             this.mainGridView.TabIndex = 0;
+            this.mainGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainGridView_CellContentClick);
             // 
             // catalogueBindingSource
             // 
@@ -521,32 +524,41 @@
             this.Column4});
             this.dataGridView2.Location = new System.Drawing.Point(3, 37);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 62;
             this.dataGridView2.Size = new System.Drawing.Size(443, 174);
             this.dataGridView2.TabIndex = 0;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "ID";
+            this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 150;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Item";
+            this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Quantity";
+            this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 150;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Price";
+            this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 150;
             // 
             // button9
             // 
@@ -567,7 +579,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(1083, 611);
+            this.ClientSize = new System.Drawing.Size(1096, 607);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
