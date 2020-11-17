@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridViewItems = new System.Windows.Forms.DataGridView();
             this.dataGridViewCart = new System.Windows.Forms.DataGridView();
             this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -316,6 +317,7 @@
             this.Controls.Add(this.button1A2C);
             this.Controls.Add(this.dataGridViewCart);
             this.Controls.Add(this.dataGridViewItems);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Customer Cart";
             this.Load += new System.EventHandler(this.Form1_Load);

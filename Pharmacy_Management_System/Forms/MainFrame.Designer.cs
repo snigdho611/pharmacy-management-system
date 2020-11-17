@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrame));
             this.mainGridView = new System.Windows.Forms.DataGridView();
             this.catalogueBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AddItem = new System.Windows.Forms.Button();
@@ -591,6 +592,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mainGridView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainFrame";
             this.Text = "Pharmacy Management System";
             this.Load += new System.EventHandler(this.MainFrame_Load);

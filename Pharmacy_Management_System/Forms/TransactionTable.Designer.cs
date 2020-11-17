@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransactionTable));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.transactionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button4 = new System.Windows.Forms.Button();
@@ -68,6 +69,7 @@
             this.ClientSize = new System.Drawing.Size(605, 450);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TransactionTable";
             this.Text = "TransactionTable";
             this.Load += new System.EventHandler(this.TransactionTable_Load);

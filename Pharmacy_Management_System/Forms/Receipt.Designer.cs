@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Receipt));
             this.label1 = new System.Windows.Forms.Label();
             this.label_NameR = new System.Windows.Forms.Label();
             this.label_PhoneNoR = new System.Windows.Forms.Label();
@@ -143,6 +144,7 @@
             this.Controls.Add(this.labelNameR);
             this.Controls.Add(this.label_NameR);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Receipt";
             this.Text = "Receipt";
             this.Load += new System.EventHandler(this.Receipt_Load);
