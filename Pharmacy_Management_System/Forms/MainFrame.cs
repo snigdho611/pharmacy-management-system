@@ -81,11 +81,11 @@ namespace SemesterDemo
 
             DataTable dtCatalog = new DataTable();
 
-            sqlCmd.Connection.Open();
-            dtCatalog.Load(sqlCmd.ExecuteReader());
-            dtmain.Load(sqlCmd.ExecuteReader());
+            access.SqlCmd.Connection.Open();
+            dtCatalog.Load(access.SqlCmd.ExecuteReader());
+            dtmain.Load(access.SqlCmd.ExecuteReader());
             mainGridView.DataSource = dtCatalog;
-            sqlCmd.Connection.Close();
+            access.SqlCmd.Connection.Close();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -107,16 +107,15 @@ namespace SemesterDemo
                 DialogResult result = MessageBox.Show(message, title, buttons);
                 if (result == DialogResult.Yes)
                 {
-                    String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
+                    DataAccess access = new DataAccess();
                     String sql = "delete from Catalogue where id = " + textBox2.Text + ";";
-                    SqlConnection conn = new SqlConnection(ConnectionString);
-                    SqlCommand sqlCmd = new SqlCommand(sql, conn);
+                    access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
-                    sqlCmd.Connection.Open();
-                    sqlCmd.ExecuteNonQuery();
-                    sqlCmd.Dispose();
-                    sqlCmd.Connection.Close();
-                    conn.Close();
+                    access.SqlCmd.Connection.Open();
+                    access.SqlCmd.ExecuteNonQuery();
+                    access.SqlCmd.Dispose();
+                    access.SqlCmd.Connection.Close();
+                    access.SqlCon.Close();
                     MessageBox.Show("Successfully deleted item!");
                 }
                 else
@@ -177,8 +176,8 @@ namespace SemesterDemo
                 }
                 else
                 {
-                    
-                    String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
+
+                    DataAccess access = new DataAccess();
                     String sql = "select * from Catalogue where id = " + Convert.ToInt32(dtmain.Rows[selectedRowIndex][0]) + ";";
                     SqlConnection conn = new SqlConnection(ConnectionString);
                     SqlCommand sqlCmd = new SqlCommand(sql, conn);
