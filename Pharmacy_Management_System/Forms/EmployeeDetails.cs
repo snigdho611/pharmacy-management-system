@@ -70,6 +70,7 @@ namespace SemesterDemo.Windows
             }
             catch (NullReferenceException NRE)
             {
+                string errorLog = NRE.ToString();
                 MessageBox.Show("You have not selected any user!");
             }
         }

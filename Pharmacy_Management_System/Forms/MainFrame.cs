@@ -36,15 +36,17 @@ namespace SemesterDemo
         //Enter a product key and a new frame will pop up with all of it's specific product details
         private void button2_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            if (mainGridView.CurrentCell==null)
             {
-                MessageBox.Show("Please enter a valid product ID for updating!");
+                
+                MessageBox.Show("Please select an item!");
             }
             else
             {
+                string selectedItem = Convert.ToString(mainGridView.SelectedRows[0].Cells[0].Value);
                 DataAccess access = new DataAccess();
-                String sql = "select * from catalog where id = " + textBox2.Text + ";";
-                SqlCommand sqlCmd = new SqlCommand(sql, access.SqlCon);
+                String sql = "select * from catalog where id = " + selectedItem + ";";
+                access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
                 access.SqlCmd.Connection.Open();
                 dt.Load(access.SqlCmd.ExecuteReader());
@@ -89,7 +91,7 @@ namespace SemesterDemo
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox2.Text))
+            if (mainGridView.CurrentCell == null)
             {
                 MessageBox.Show("Please enter a valid product ID to delete!");
             }
@@ -102,7 +104,8 @@ namespace SemesterDemo
                 if (result == DialogResult.Yes)
                 {
                     DataAccess access = new DataAccess();
-                    String sql = "delete from Catalogue where id = " + textBox2.Text + ";";
+                    string selectedItem = Convert.ToString(mainGridView.SelectedRows[0].Cells[0].Value);
+                    String sql = "delete from Catalogue where id = " + selectedItem + ";";
                     access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
                     access.SqlCmd.Connection.Open();
