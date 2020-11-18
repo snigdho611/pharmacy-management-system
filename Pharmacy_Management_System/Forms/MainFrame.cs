@@ -43,7 +43,7 @@ namespace SemesterDemo
             else
             {
                 DataAccess access = new DataAccess();
-                String sql = "select * from Catalogue where id = " + textBox2.Text + ";";
+                String sql = "select * from catalog where id = " + textBox2.Text + ";";
                 SqlCommand sqlCmd = new SqlCommand(sql, access.SqlCon);
 
                 access.SqlCmd.Connection.Open();
