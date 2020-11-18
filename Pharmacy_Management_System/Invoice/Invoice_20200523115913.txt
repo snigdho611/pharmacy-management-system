@@ -1,7 +1,0 @@
-Product     |     Price      |
-Hexisol x 3      |      90
- x       |      
-Customer ID: 1
-Total Price: 90
-23/05/2020 11:59:13
-Billed by: Abir-Al-Arafat

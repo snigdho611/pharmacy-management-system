@@ -1,6 +1,0 @@
-Product     |     Price      |
-Napa 50mg x 4
-Paracetamol 50mg x 2
-
-Customer ID: 22
-22/05/2020 21:19:00

@@ -1,7 +1,0 @@
-Product     |     Price      |
-Paracetamol 50mg x 12      |      240
-Sergel x 15      |      900
-Customer ID: 
-Total Price: 1140
-21/05/2020 21:42:41
-Billed by: Fahad Bin Hafiz

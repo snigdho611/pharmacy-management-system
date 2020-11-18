@@ -1,9 +1,0 @@
-Product     |     Price      |
-Napa 50mg x 1      |      30
-Aspirin 50mg x 5      |      50
-Histacine x 2      |      120
- x       |      
-Customer ID: 
-Total Price: 120
-23/05/2020 00:26:39
-Billed by: 

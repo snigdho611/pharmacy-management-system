@@ -1,8 +1,0 @@
-Product     |     Price      |
-Aspirin 50mg x 3      |      30
-Pudinhara x 5      |      50
-Eno x 2      |      10
-Customer ID: 
-Total Price: 90
-21/05/2020 23:01:57
-Billed by: 

@@ -1,8 +1,0 @@
-Product     |     Price      |
-Benadryl x 3      |      60
-Pudinhara x 1      |      10
- x       |      
-Customer ID: 3
-Total Price: 70
-23/05/2020 11:39:35
-Billed by: Abir-Al-Arafat

@@ -1,7 +1,0 @@
-Product     |     Price      |
-Paracetamol 50mg x 2      |      40
- x       |      
-Customer ID: 
-Total Price: 40
-23/05/2020 00:26:10
-Billed by: 

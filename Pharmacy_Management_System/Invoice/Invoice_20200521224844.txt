@@ -1,8 +1,0 @@
-Product     |     Price      |
-Hexisol x 2      |      60
-Hexisol x 3      |      90
-Pudinhara x 4      |      40
-Customer ID: 
-Total Price: 190
-21/05/2020 22:48:44
-Billed by: 
