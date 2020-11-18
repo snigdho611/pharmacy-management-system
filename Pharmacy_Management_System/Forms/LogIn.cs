@@ -1,10 +1,10 @@
-﻿using SemesterDemo.Windows;
+﻿using Pharmacy_Management_System.Windows;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace SemesterDemo
+namespace Pharmacy_Management_System
 {
     public partial class LogIn : Form
     {

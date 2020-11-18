@@ -1,4 +1,4 @@
-﻿namespace SemesterDemo
+﻿namespace Pharmacy_Management_System
 {
     partial class MainFrame
     {

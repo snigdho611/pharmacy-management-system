@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SemesterDemo.Windows
+namespace Pharmacy_Management_System.Windows
 {
     public partial class Form1 : Form
     {

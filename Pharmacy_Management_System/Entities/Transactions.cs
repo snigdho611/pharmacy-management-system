@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SemesterDemo.Entities
+namespace Pharmacy_Management_System.Entities
 {
     class Transactions
     {

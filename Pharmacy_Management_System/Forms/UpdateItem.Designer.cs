@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace SemesterDemo.Windows
+namespace Pharmacy_Management_System.Windows
 {
     partial class UpdateItem
     {

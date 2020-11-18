@@ -2,7 +2,7 @@
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace SemesterDemo.Windows
+namespace Pharmacy_Management_System.Windows
 {
     public partial class NewItem : Form
     {

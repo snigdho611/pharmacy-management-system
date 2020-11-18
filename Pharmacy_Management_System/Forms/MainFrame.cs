@@ -1,12 +1,12 @@
-﻿using SemesterDemo.Windows;
+﻿using Pharmacy_Management_System.Windows;
 using System;
 using System.IO;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using SemesterDemo.Access;
+using Pharmacy_Management_System.Access;
 
-namespace SemesterDemo
+namespace Pharmacy_Management_System
 {
     public partial class MainFrame : Form
     {

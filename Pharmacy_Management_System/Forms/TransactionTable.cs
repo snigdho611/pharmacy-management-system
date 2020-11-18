@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace SemesterDemo.Windows
+namespace Pharmacy_Management_System.Windows
 {
     public partial class TransactionTable : Form
     {

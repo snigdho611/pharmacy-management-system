@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SemesterDemo.Access
+namespace Pharmacy_Management_System.Access
 {
     class DataAccess
     {

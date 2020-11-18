@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace SemesterDemo.Windows
+namespace Pharmacy_Management_System.Windows
 {
     public partial class UserReg : Form
     {

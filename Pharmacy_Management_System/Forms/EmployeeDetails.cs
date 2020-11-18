@@ -2,8 +2,9 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Pharmacy_Management_System.Access;
 
-namespace SemesterDemo.Windows
+namespace Pharmacy_Management_System.Windows
 {
     public partial class EmployeeDetails : Form
     {
@@ -14,7 +15,6 @@ namespace SemesterDemo.Windows
 
         private void EmployeeDetails_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB_SAFDataSet3.UserLogIn' table. You can move, or remove it, as needed.
 
         }
 
@@ -88,22 +88,19 @@ namespace SemesterDemo.Windows
                 else
                 {
                     UserReg UR = new UserReg();
-                    //UR.updateFrame();
                     UR.StartPosition = FormStartPosition.CenterParent;
-                    
 
-                    String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
+
+                    DataAccess access = new DataAccess();
                     String sql = "select * from UserLogIn where id = "+ Convert.ToInt32(dtGLobal.Rows[selectedRowIndex][0])+";";
-                    SqlConnection conn = new SqlConnection(ConnectionString);
-                    SqlCommand sqlCmd = new SqlCommand(sql, conn);
+                    access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
                     DataTable dt2 = new DataTable();
 
-                    sqlCmd.Connection.Open();
-                    dt2.Load(sqlCmd.ExecuteReader());
-                    //dataGridView1.DataSource = dt;
+                    access.SqlCmd.Connection.Open();
+                    dt2.Load(access.SqlCmd.ExecuteReader());
                     UR.updateFrame(Convert.ToInt32(dt2.Rows[0][0]), Convert.ToString(dt2.Rows[0][1]), Convert.ToString(dt2.Rows[0][2]), Convert.ToString(dt2.Rows[0][3]), Convert.ToString(dt2.Rows[0][4]));
-                    sqlCmd.Connection.Close();
+                    access.SqlCmd.Connection.Close();
                     UR.ShowDialog();
                 }
             }
@@ -138,17 +135,15 @@ namespace SemesterDemo.Windows
                 }
                 else
                 {
-                    String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
+                    DataAccess access = new DataAccess();
                     String sql = "delete from UserLogIn where id = " + Convert.ToInt32(dtGLobal.Rows[selectedRowIndex][0]) + ";";
-                    SqlConnection conn = new SqlConnection(ConnectionString);
-                    SqlCommand sqlCmd = new SqlCommand(sql, conn);
+                    access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
                     DataTable dt2 = new DataTable();
 
-                    sqlCmd.Connection.Open();
-                    sqlCmd.ExecuteNonQuery();
-                    //dataGridView1.DataSource = dt;
-                    sqlCmd.Connection.Close();
+                    access.SqlCmd.Connection.Open();
+                    access.SqlCmd.ExecuteNonQuery();
+                    access.SqlCmd.Connection.Close();
                     MessageBox.Show("Successfully deleted selected data!");
                 }
             }
