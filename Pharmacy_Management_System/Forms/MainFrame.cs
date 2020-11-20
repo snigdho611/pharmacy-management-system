@@ -93,7 +93,7 @@ namespace Pharmacy_Management_System
         {
             if (mainGridView.CurrentCell == null)
             {
-                MessageBox.Show("Please enter a valid product ID to delete!");
+                MessageBox.Show("Please select a product to delete!");
             }
             else
             {
@@ -165,35 +165,30 @@ namespace Pharmacy_Management_System
         {
             try
             {
-                Int32 selectedRowCount = mainGridView.Rows.GetRowCount(DataGridViewElementStates.Selected);
-                Int32 selectedRowIndex = mainGridView.CurrentCell.RowIndex;
-                if (selectedRowCount > 1)
+                if (mainGridView.CurrentCell == null)
                 {
-                    MessageBox.Show("You have selected multiple rows. Please select a single item!");
+                    MessageBox.Show("Please select an item to add to cart");
                 }
                 else
                 {
-
                     DataAccess access = new DataAccess();
-                    String sql = "select * from catalog where id = " + Convert.ToInt32(dtmain.Rows[selectedRowIndex][0]) + ";";
+                    String sql = "select * from catalog where id = " + Convert.ToInt32(mainGridView.SelectedRows[0]) + ";";
                     access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
                     DataTable dtCustomer = new DataTable();
                     access.SqlCmd.Connection.Open();
                     dtCustomer.Load(access.SqlCmd.ExecuteReader());
-
-
                     access.SqlCmd.Connection.Close();
                     int row = 0;
                     try
                     {
                         total = total + Convert.ToInt32(dtCustomer.Rows[0][4]) * (Convert.ToInt32(textBox3.Text));
-                        dataGridView2.Rows.Add();
-                        row = dataGridView2.Rows.Count - 2;
-                        dataGridView2["Column1", row].Value = dtCustomer.Rows[0][0];
-                        dataGridView2["Column2", row].Value = dtCustomer.Rows[0][1];
-                        dataGridView2["Column3", row].Value = textBox3.Text;
-                        dataGridView2["Column4", row].Value = Convert.ToInt32(dtCustomer.Rows[0][4]) * (Convert.ToInt32(textBox3.Text));
+                        cartGridView.Rows.Add();
+                        row = cartGridView.Rows.Count - 2;
+                        cartGridView["Column1", row].Value = dtCustomer.Rows[0][0];
+                        cartGridView["Column2", row].Value = dtCustomer.Rows[0][1];
+                        cartGridView["Column3", row].Value = textBox3.Text;
+                        cartGridView["Column4", row].Value = Convert.ToInt32(dtCustomer.Rows[0][4]) * (Convert.ToInt32(textBox3.Text));
                         textBox4.Text = Convert.ToString(total);
                     }
                     catch (FormatException FE)
@@ -223,9 +218,8 @@ namespace Pharmacy_Management_System
         {
             invoice = invoice + 1;
             total = 0;
-            DateTime DT;
-            DT = DateTime.Now;
-            int totalList = dataGridView2.Rows.Count-1;
+            
+            int totalList = cartGridView.Rows.Count-1;
             if (Convert.ToInt32(totalList) <= 0)
             {
                 MessageBox.Show("You didn't select products!");
@@ -236,7 +230,7 @@ namespace Pharmacy_Management_System
                 String totalItemsName = null;
                 for (int i = 0; i <= totalList; i++)
                 {
-                    totalItemsName = totalItemsName + Convert.ToString(dataGridView2["Column2", i].Value) + "x" + Convert.ToString(dataGridView2["Column3", i].Value) + " ";
+                    totalItemsName = totalItemsName + Convert.ToString(cartGridView["Column2", i].Value) + "x" + Convert.ToString(cartGridView["Column3", i].Value) + " ";
                 }
 
                 DataAccess access = new DataAccess();
@@ -251,20 +245,20 @@ namespace Pharmacy_Management_System
                 MessageBox.Show("Successfully inserted new transaction!");
                 //this.Dispose();
 
-                using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DT.ToString("yyyyMMddHHmmss") + ".txt"))
+                using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt"))
                 {
                     writer.WriteLine("Product     |     " + "Price      |");
 
                     for (int i = 0; i < totalList; i++)
                     {
 
-                        writer.WriteLine(Convert.ToString(dataGridView2["Column2", i].Value) + " x " +
-                            Convert.ToString(dataGridView2["Column3", i].Value) + "      |      " +
-                            Convert.ToString(dataGridView2["Column4", i].Value));
+                        writer.WriteLine(Convert.ToString(cartGridView["Column2", i].Value) + " x " +
+                            Convert.ToString(cartGridView["Column3", i].Value) + "      |      " +
+                            Convert.ToString(cartGridView["Column4", i].Value));
                     }
                     writer.WriteLine("Customer ID: " + textBox8.Text);
                     writer.WriteLine("Total Price: " + textBox4.Text);
-                    writer.WriteLine(DT.ToString("dd/MM/yyyy HH:mm:ss"));
+                    writer.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
                     writer.WriteLine("Billed by: " + textBox1.Text);
                 }
 
@@ -276,7 +270,7 @@ namespace Pharmacy_Management_System
                 String totalItemsName = null;
                 for (int i = 0; i <= totalList; i++)
                 {
-                    totalItemsName = totalItemsName + Convert.ToString(dataGridView2["Column2", i].Value) + "x" + Convert.ToString(dataGridView2["Column3", i].Value) + " ";
+                    totalItemsName = totalItemsName + Convert.ToString(cartGridView["Column2", i].Value) + "x" + Convert.ToString(cartGridView["Column3", i].Value) + " ";
                 }
 
                 DataAccess access = new DataAccess();
@@ -301,20 +295,20 @@ namespace Pharmacy_Management_System
                     access.SqlCmd.Connection.Close();
                     MessageBox.Show("Successfully inserted new transaction!");
 
-                    using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DT.ToString("yyyyMMddHHmmss") + ".txt"))
+                    using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt"))
                     {
                         writer.WriteLine("Product     |     " + "Price      |");
 
                         for (int i = 0; i <= totalList; i++)
                         {
 
-                            writer.WriteLine(Convert.ToString(dataGridView2["Column2", i].Value) + " x " +
-                                Convert.ToString(dataGridView2["Column3", i].Value) + "      |      " +
-                                Convert.ToString(dataGridView2["Column4", i].Value));
+                            writer.WriteLine(Convert.ToString(cartGridView["Column2", i].Value) + " x " +
+                                Convert.ToString(cartGridView["Column3", i].Value) + "      |      " +
+                                Convert.ToString(cartGridView["Column4", i].Value));
                         }
                         writer.WriteLine("Customer ID: " + textBox8.Text);
                         writer.WriteLine("Total Price: " + textBox4.Text);
-                        writer.WriteLine(DT.ToString("dd/MM/yyyy HH:mm:ss"));
+                        writer.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
                         writer.WriteLine("Billed by: " + textBox1.Text);
 
                     }
@@ -330,7 +324,7 @@ namespace Pharmacy_Management_System
                 String totalItemsName = null;
                 for (int i = 0; i <= totalList; i++)
                 {
-                    totalItemsName = totalItemsName + Convert.ToString(dataGridView2["Column2", i].Value) + "x" + Convert.ToString(dataGridView2["Column3", i].Value) + " ";
+                    totalItemsName = totalItemsName + Convert.ToString(cartGridView["Column2", i].Value) + "x" + Convert.ToString(cartGridView["Column3", i].Value) + " ";
                 }
 
                 MessageBox.Show("Added Customer");
@@ -359,20 +353,20 @@ namespace Pharmacy_Management_System
                     access.SqlCmd.Connection.Close();
                     MessageBox.Show("Successfully inserted new transaction!");
 
-                    using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DT.ToString("yyyyMMddHHmmss") + ".txt"))
+                    using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt"))
                     {
                         writer.WriteLine("Product     |     " + "Price      |");
 
                         for (int i = 0; i <= totalList; i++)
                         {
 
-                            writer.WriteLine(Convert.ToString(dataGridView2["Column2", i].Value) + " x " +
-                                Convert.ToString(dataGridView2["Column3", i].Value) + "      |      " +
-                                Convert.ToString(dataGridView2["Column4", i].Value));
+                            writer.WriteLine(Convert.ToString(cartGridView["Column2", i].Value) + " x " +
+                                Convert.ToString(cartGridView["Column3", i].Value) + "      |      " +
+                                Convert.ToString(cartGridView["Column4", i].Value));
                         }
                         writer.WriteLine("Customer ID: " + textBox8.Text);
                         writer.WriteLine("Total Price: " + textBox4.Text);
-                        writer.WriteLine(DT.ToString("dd/MM/yyyy HH:mm:ss"));
+                        writer.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
                         writer.WriteLine("Billed by: " + textBox1.Text);
 
                     }
@@ -398,8 +392,8 @@ namespace Pharmacy_Management_System
 
         private void button10_Click(object sender, EventArgs e)
         {
-            dataGridView2.Rows.Clear();
-            dataGridView2.Refresh();
+            cartGridView.Rows.Clear();
+            cartGridView.Refresh();
             textBox4.Text = "0";
             total = 0;
         }
