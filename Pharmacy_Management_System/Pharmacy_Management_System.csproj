@@ -77,11 +77,11 @@
     <Compile Include="Forms\EmployeeDetails.Designer.cs">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CustomerUI.cs">
+    <Compile Include="Forms\CustomerUi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerUI.Designer.cs">
-      <DependentUpon>CustomerUI.cs</DependentUpon>
+    <Compile Include="Forms\CustomerUi.Designer.cs">
+      <DependentUpon>CustomerUi.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Receipt.cs">
       <SubType>Form</SubType>
@@ -139,8 +139,8 @@
     <EmbeddedResource Include="Forms\EmployeeDetails.resx">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CustomerUI.resx">
-      <DependentUpon>CustomerUI.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CustomerUi.resx">
+      <DependentUpon>CustomerUi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Receipt.resx">
       <DependentUpon>Receipt.cs</DependentUpon>

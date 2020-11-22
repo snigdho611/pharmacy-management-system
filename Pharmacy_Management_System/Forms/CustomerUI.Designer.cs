@@ -318,7 +318,7 @@
             this.Controls.Add(this.dataGridViewCart);
             this.Controls.Add(this.dataGridViewItems);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "CustomerUi";
             this.Text = "Customer Cart";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();

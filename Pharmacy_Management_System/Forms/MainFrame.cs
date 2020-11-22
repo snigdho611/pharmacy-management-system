@@ -182,14 +182,16 @@ namespace Pharmacy_Management_System
                     int row = 0;
                     try
                     {
+                        /*
                         total = total + Convert.ToInt32(dtCustomer.Rows[0][4]) * (Convert.ToInt32(textBox3.Text));
                         cartGridView.Rows.Add();
                         row = cartGridView.Rows.Count - 2;
                         cartGridView["Column1", row].Value = dtCustomer.Rows[0][0];
                         cartGridView["Column2", row].Value = dtCustomer.Rows[0][1];
-                        cartGridView["Column3", row].Value = textBox3.Text;
+                        cartGridView["Column3", row].Value = dtCustomer.Rows[0][3];
                         cartGridView["Column4", row].Value = Convert.ToInt32(dtCustomer.Rows[0][4]) * (Convert.ToInt32(textBox3.Text));
                         textBox4.Text = Convert.ToString(total);
+                        */
                     }
                     catch (FormatException FE)
                     {
