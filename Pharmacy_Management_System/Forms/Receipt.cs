@@ -15,7 +15,7 @@ namespace Pharmacy_Management_System.Windows
         {
             labelNameR.Text = CustomerDetails.nameCD;
             labelPNR.Text = CustomerDetails.PhoneNoCD;
-            labelTPR.Text = Form1.finalPrice;
+            labelTPR.Text = CustomerUi.finalPrice;
             
         }
 

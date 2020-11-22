@@ -27,7 +27,7 @@ namespace Pharmacy_Management_System.Windows
 
         private void CustomerDetails_Load(object sender, EventArgs e)
         {
-            labelTPinCD.Text = Form1.finalPrice;
+            labelTPinCD.Text = CustomerUi.finalPrice;
         }
 
 
@@ -43,7 +43,7 @@ namespace Pharmacy_Management_System.Windows
             {
                 MainFrame.invoice = MainFrame.invoice + 1;
                 
-                Form1 F = new Form1();
+                CustomerUi F = new CustomerUi();
                 
                 //MessageBox.Show(Convert.ToString(totalList));
                 string cn_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
