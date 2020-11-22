@@ -5,15 +5,15 @@ using System.Windows.Forms;
 
 namespace Pharmacy_Management_System.Windows
 {
-    public partial class Form1 : Form
+    public partial class CustomerUi : Form
     {
         
-        public Form1()
+        public CustomerUi()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void CustomerUi_Load(object sender, EventArgs e)
         {
             loadtbl_data();
             textBox_TP.Text = "0";

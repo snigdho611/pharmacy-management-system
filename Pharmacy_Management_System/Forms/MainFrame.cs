@@ -387,7 +387,7 @@ namespace Pharmacy_Management_System
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form1 F = new Form1();
+            CustomerUi F = new CustomerUi();
             F.StartPosition = FormStartPosition.CenterParent;
             F.ShowDialog();
         }

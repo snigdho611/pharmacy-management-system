@@ -1,6 +1,6 @@
 ﻿namespace Pharmacy_Management_System.Windows
 {
-    partial class Form1
+    partial class CustomerUi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerUi));
             this.dataGridViewItems = new System.Windows.Forms.DataGridView();
             this.dataGridViewCart = new System.Windows.Forms.DataGridView();
             this.Item = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -291,7 +291,7 @@
             this.textBox_Leftstock.Size = new System.Drawing.Size(61, 20);
             this.textBox_Leftstock.TabIndex = 8;
             // 
-            // Form1
+            // CustomerUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -320,7 +320,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerUi";
             this.Text = "Customer Cart";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.CustomerUi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).EndInit();
             this.ResumeLayout(false);
