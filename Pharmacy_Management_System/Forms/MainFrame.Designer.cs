@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrame));
             this.mainGridView = new System.Windows.Forms.DataGridView();
             this.catalogueBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -65,11 +67,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.cartGridView = new System.Windows.Forms.DataGridView();
-            this.btnCustomerPanel = new System.Windows.Forms.Button();
             this.cartId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cartItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cartQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cartPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCustomerPanel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mainGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.catalogueBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
@@ -84,6 +86,14 @@
             // 
             this.mainGridView.BackgroundColor = System.Drawing.Color.Thistle;
             this.mainGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.mainGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.mainGridView.Location = new System.Drawing.Point(792, 18);
             this.mainGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mainGridView.MultiSelect = false;
@@ -91,7 +101,7 @@
             this.mainGridView.ReadOnly = true;
             this.mainGridView.RowHeadersWidth = 62;
             this.mainGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.mainGridView.Size = new System.Drawing.Size(814, 512);
+            this.mainGridView.Size = new System.Drawing.Size(1035, 512);
             this.mainGridView.TabIndex = 0;
             this.mainGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainGridView_CellContentClick);
             // 
@@ -442,7 +452,7 @@
             this.panel4.Location = new System.Drawing.Point(792, 540);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(814, 382);
+            this.panel4.Size = new System.Drawing.Size(1035, 382);
             this.panel4.TabIndex = 15;
             // 
             // btnRefreshCart
@@ -502,29 +512,22 @@
             this.cartItem,
             this.cartQuantity,
             this.cartPrice});
-            this.cartGridView.Location = new System.Drawing.Point(78, 54);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.cartGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.cartGridView.Location = new System.Drawing.Point(9, 54);
             this.cartGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cartGridView.Name = "cartGridView";
             this.cartGridView.ReadOnly = true;
             this.cartGridView.RowHeadersWidth = 62;
             this.cartGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.cartGridView.Size = new System.Drawing.Size(660, 268);
+            this.cartGridView.Size = new System.Drawing.Size(1022, 268);
             this.cartGridView.TabIndex = 0;
-            // 
-            // btnCustomerPanel
-            // 
-            this.btnCustomerPanel.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnCustomerPanel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCustomerPanel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomerPanel.ForeColor = System.Drawing.Color.Indigo;
-            this.btnCustomerPanel.Location = new System.Drawing.Point(372, 849);
-            this.btnCustomerPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCustomerPanel.Name = "btnCustomerPanel";
-            this.btnCustomerPanel.Size = new System.Drawing.Size(134, 62);
-            this.btnCustomerPanel.TabIndex = 16;
-            this.btnCustomerPanel.Text = "Customer Panel";
-            this.btnCustomerPanel.UseVisualStyleBackColor = false;
-            this.btnCustomerPanel.Click += new System.EventHandler(this.button9_Click);
             // 
             // cartId
             // 
@@ -558,12 +561,27 @@
             this.cartPrice.ReadOnly = true;
             this.cartPrice.Width = 150;
             // 
+            // btnCustomerPanel
+            // 
+            this.btnCustomerPanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCustomerPanel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCustomerPanel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerPanel.ForeColor = System.Drawing.Color.Indigo;
+            this.btnCustomerPanel.Location = new System.Drawing.Point(372, 849);
+            this.btnCustomerPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCustomerPanel.Name = "btnCustomerPanel";
+            this.btnCustomerPanel.Size = new System.Drawing.Size(134, 62);
+            this.btnCustomerPanel.TabIndex = 16;
+            this.btnCustomerPanel.Text = "Customer Panel";
+            this.btnCustomerPanel.UseVisualStyleBackColor = false;
+            this.btnCustomerPanel.Click += new System.EventHandler(this.button9_Click);
+            // 
             // MainFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.ClientSize = new System.Drawing.Size(1617, 934);
+            this.ClientSize = new System.Drawing.Size(1840, 934);
             this.Controls.Add(this.btnCustomerPanel);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelCatalogPanel);

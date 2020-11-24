@@ -160,6 +160,7 @@ namespace Pharmacy_Management_System
         }
 
         int total = 0;
+        
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -171,32 +172,17 @@ namespace Pharmacy_Management_System
                 }
                 else
                 {
-                    DataAccess access = new DataAccess();
-                    String sql = "select * from catalog where id = " + Convert.ToInt32(mainGridView.SelectedRows[0]) + ";";
-                    access.SqlCmd = new SqlCommand(sql, access.SqlCon);
+                    DataGridViewRow currentSelectedRow = mainGridView.SelectedRows[0];
+                    int rowCount;
+                    //MessageBox.Show(cartGridView.Rows.Count.ToString());
+                    cartGridView.Rows.Add();
+                    rowCount = cartGridView.Rows.Count - 2;
+                    cartGridView["cartId", rowCount].Value = rowCount + 1;
+                    cartGridView["cartItem", rowCount].Value = currentSelectedRow.Cells[1].Value;
+                    cartGridView["cartQuantity", rowCount].Value = "1";
+                    cartGridView["cartPrice", rowCount].Value = currentSelectedRow.Cells[4].Value;
 
-                    DataTable dtCustomer = new DataTable();
-                    access.SqlCmd.Connection.Open();
-                    dtCustomer.Load(access.SqlCmd.ExecuteReader());
-                    access.SqlCmd.Connection.Close();
-                    int row = 0;
-                    try
-                    {
-                        /*
-                        total = total + Convert.ToInt32(dtCustomer.Rows[0][4]) * (Convert.ToInt32(textBox3.Text));
-                        cartGridView.Rows.Add();
-                        row = cartGridView.Rows.Count - 2;
-                        cartGridView["Column1", row].Value = dtCustomer.Rows[0][0];
-                        cartGridView["Column2", row].Value = dtCustomer.Rows[0][1];
-                        cartGridView["Column3", row].Value = dtCustomer.Rows[0][3];
-                        cartGridView["Column4", row].Value = Convert.ToInt32(dtCustomer.Rows[0][4]) * (Convert.ToInt32(textBox3.Text));
-                        textBox4.Text = Convert.ToString(total);
-                        */
-                    }
-                    catch (FormatException FE)
-                    {
-                        MessageBox.Show("Please enter a numerical value");
-                    }
+                    int quantity;
                 }
             }
             catch (NullReferenceException NRE)
