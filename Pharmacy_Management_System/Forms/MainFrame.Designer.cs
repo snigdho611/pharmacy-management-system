@@ -65,7 +65,7 @@
             this.btnRefreshCart = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxTotal = new System.Windows.Forms.TextBox();
             this.cartGridView = new System.Windows.Forms.DataGridView();
             this.cartId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cartItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -447,7 +447,7 @@
             this.panel4.Controls.Add(this.btnRefreshCart);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.textBox4);
+            this.panel4.Controls.Add(this.textBoxTotal);
             this.panel4.Controls.Add(this.cartGridView);
             this.panel4.Location = new System.Drawing.Point(792, 540);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -492,16 +492,16 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "BDT";
             // 
-            // textBox4
+            // textBoxTotal
             // 
-            this.textBox4.Location = new System.Drawing.Point(516, 338);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(96, 30);
-            this.textBox4.TabIndex = 17;
-            this.textBox4.Text = "0";
+            this.textBoxTotal.Location = new System.Drawing.Point(516, 338);
+            this.textBoxTotal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxTotal.Multiline = true;
+            this.textBoxTotal.Name = "textBoxTotal";
+            this.textBoxTotal.ReadOnly = true;
+            this.textBoxTotal.Size = new System.Drawing.Size(96, 30);
+            this.textBoxTotal.TabIndex = 17;
+            this.textBoxTotal.Text = "0";
             // 
             // cartGridView
             // 
@@ -658,7 +658,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxTotal;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button btnCheckOut;

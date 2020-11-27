@@ -182,7 +182,7 @@ namespace Pharmacy_Management_System
                     cartGridView["cartQuantity", rowCount].Value = "1";
                     cartGridView["cartPrice", rowCount].Value = currentSelectedRow.Cells[4].Value;
 
-                    int quantity;
+                    textBoxTotal.Text = Convert.ToString(Convert.ToInt32(textBoxTotal.Text)+ Convert.ToInt32(cartGridView["cartPrice", rowCount].Value));
                 }
             }
             catch (NullReferenceException NRE)
@@ -204,6 +204,26 @@ namespace Pharmacy_Management_System
 
         private void button7_Click(object sender, EventArgs e)
         {
+            int totalList = cartGridView.Rows.Count - 1;
+
+            using (StreamWriter writer = new StreamWriter(@"D:\Snigdho\Github\Pharmacy_Management_System\Pharmacy_Management_System\Invoices\Invoice_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt"))
+            {
+                writer.WriteLine("Product     |     " + "Price      |");
+
+                for (int i = 0; i < totalList; i++)
+                {
+
+                    writer.WriteLine(Convert.ToString(cartGridView["cartItem", i].Value) + " x " +
+                        Convert.ToString(cartGridView["cartQuantity", i].Value) + "      |      " +
+                        Convert.ToString(cartGridView["cartPrice", i].Value));
+                }
+                writer.WriteLine("Customer ID: " + textBox8.Text);
+                writer.WriteLine("Total Price: " + textBoxTotal.Text);
+                writer.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
+                writer.WriteLine("Billed by: " + textBox1.Text);
+            }
+
+            /*
             invoice = invoice + 1;
             total = 0;
             
@@ -364,6 +384,9 @@ namespace Pharmacy_Management_System
             {
                 MessageBox.Show("Invalid, remove Customer ID field for new user!");
             }
+            */
+
+
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -382,7 +405,7 @@ namespace Pharmacy_Management_System
         {
             cartGridView.Rows.Clear();
             cartGridView.Refresh();
-            textBox4.Text = "0";
+            textBoxTotal.Text = "0";
             total = 0;
         }
 
