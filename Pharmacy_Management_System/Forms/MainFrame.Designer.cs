@@ -151,7 +151,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 863);
+            this.label1.Location = new System.Drawing.Point(14, 535);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 21);
@@ -162,7 +162,7 @@
             // textBox1
             // 
             this.textBox1.AcceptsTab = true;
-            this.textBox1.Location = new System.Drawing.Point(150, 860);
+            this.textBox1.Location = new System.Drawing.Point(146, 532);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -190,7 +190,7 @@
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogOut.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.Indigo;
-            this.btnLogOut.Location = new System.Drawing.Point(528, 860);
+            this.btnLogOut.Location = new System.Drawing.Point(524, 532);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(126, 42);
@@ -204,7 +204,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.btnLaunchPanel);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(22, 723);
+            this.panel1.Location = new System.Drawing.Point(18, 395);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(632, 117);
@@ -246,10 +246,10 @@
             this.panelPurchase.Controls.Add(this.btnCheckOut);
             this.panelPurchase.Controls.Add(this.btnAddToCart);
             this.panelPurchase.Controls.Add(this.label4);
-            this.panelPurchase.Location = new System.Drawing.Point(22, 365);
+            this.panelPurchase.Location = new System.Drawing.Point(361, 18);
             this.panelPurchase.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelPurchase.Name = "panelPurchase";
-            this.panelPurchase.Size = new System.Drawing.Size(322, 349);
+            this.panelPurchase.Size = new System.Drawing.Size(322, 337);
             this.panelPurchase.TabIndex = 12;
             // 
             // btnTransactions
@@ -292,7 +292,7 @@
             this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCheckOut.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckOut.ForeColor = System.Drawing.Color.Indigo;
-            this.btnCheckOut.Location = new System.Drawing.Point(95, 287);
+            this.btnCheckOut.Location = new System.Drawing.Point(94, 274);
             this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(124, 42);
@@ -482,7 +482,7 @@
             this.btnCustomerPanel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCustomerPanel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomerPanel.ForeColor = System.Drawing.Color.Indigo;
-            this.btnCustomerPanel.Location = new System.Drawing.Point(370, 852);
+            this.btnCustomerPanel.Location = new System.Drawing.Point(366, 524);
             this.btnCustomerPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCustomerPanel.Name = "btnCustomerPanel";
             this.btnCustomerPanel.Size = new System.Drawing.Size(134, 62);
