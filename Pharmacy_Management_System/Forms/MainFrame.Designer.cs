@@ -48,14 +48,7 @@
             this.btnTransactions = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.btnCheckOut = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panelCatalogPanel = new System.Windows.Forms.Panel();
@@ -197,7 +190,7 @@
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogOut.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.Indigo;
-            this.btnLogOut.Location = new System.Drawing.Point(528, 849);
+            this.btnLogOut.Location = new System.Drawing.Point(528, 860);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(126, 42);
@@ -250,20 +243,13 @@
             this.panelPurchase.Controls.Add(this.btnTransactions);
             this.panelPurchase.Controls.Add(this.label14);
             this.panelPurchase.Controls.Add(this.textBox8);
-            this.panelPurchase.Controls.Add(this.label13);
             this.panelPurchase.Controls.Add(this.btnCheckOut);
-            this.panelPurchase.Controls.Add(this.label11);
-            this.panelPurchase.Controls.Add(this.textBox7);
-            this.panelPurchase.Controls.Add(this.label10);
-            this.panelPurchase.Controls.Add(this.textBox6);
-            this.panelPurchase.Controls.Add(this.label9);
-            this.panelPurchase.Controls.Add(this.textBox5);
             this.panelPurchase.Controls.Add(this.btnAddToCart);
             this.panelPurchase.Controls.Add(this.label4);
             this.panelPurchase.Location = new System.Drawing.Point(22, 365);
             this.panelPurchase.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelPurchase.Name = "panelPurchase";
-            this.panelPurchase.Size = new System.Drawing.Size(632, 349);
+            this.panelPurchase.Size = new System.Drawing.Size(322, 349);
             this.panelPurchase.TabIndex = 12;
             // 
             // btnTransactions
@@ -272,7 +258,7 @@
             this.btnTransactions.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTransactions.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTransactions.ForeColor = System.Drawing.Color.Indigo;
-            this.btnTransactions.Location = new System.Drawing.Point(446, 48);
+            this.btnTransactions.Location = new System.Drawing.Point(65, 64);
             this.btnTransactions.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTransactions.Name = "btnTransactions";
             this.btnTransactions.Size = new System.Drawing.Size(153, 42);
@@ -285,7 +271,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(478, 232);
+            this.label14.Location = new System.Drawing.Point(90, 227);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(124, 42);
@@ -294,22 +280,11 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(506, 192);
+            this.textBox8.Location = new System.Drawing.Point(118, 187);
             this.textBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(66, 26);
             this.textBox8.TabIndex = 24;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(20, 175);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(394, 27);
-            this.label13.TabIndex = 23;
-            this.label13.Text = "Only for new customers (Optional)";
             // 
             // btnCheckOut
             // 
@@ -317,7 +292,7 @@
             this.btnCheckOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCheckOut.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckOut.ForeColor = System.Drawing.Color.Indigo;
-            this.btnCheckOut.Location = new System.Drawing.Point(483, 292);
+            this.btnCheckOut.Location = new System.Drawing.Point(95, 287);
             this.btnCheckOut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(124, 42);
@@ -326,73 +301,13 @@
             this.btnCheckOut.UseVisualStyleBackColor = false;
             this.btnCheckOut.Click += new System.EventHandler(this.button7_Click);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(20, 302);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(151, 21);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "Phone number: ";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.Plum;
-            this.textBox7.Location = new System.Drawing.Point(184, 298);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(206, 26);
-            this.textBox7.TabIndex = 21;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(20, 262);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 21);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Email: ";
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.Plum;
-            this.textBox6.Location = new System.Drawing.Point(184, 258);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(206, 26);
-            this.textBox6.TabIndex = 19;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(20, 222);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(164, 21);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Customer Name: ";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.Plum;
-            this.textBox5.Location = new System.Drawing.Point(184, 218);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(206, 26);
-            this.textBox5.TabIndex = 17;
-            // 
             // btnAddToCart
             // 
             this.btnAddToCart.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddToCart.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddToCart.ForeColor = System.Drawing.Color.Indigo;
-            this.btnAddToCart.Location = new System.Drawing.Point(282, 125);
+            this.btnAddToCart.Location = new System.Drawing.Point(65, 135);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(147, 42);
@@ -423,7 +338,7 @@
             this.panelCatalogPanel.Location = new System.Drawing.Point(18, 18);
             this.panelCatalogPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelCatalogPanel.Name = "panelCatalogPanel";
-            this.panelCatalogPanel.Size = new System.Drawing.Size(281, 337);
+            this.panelCatalogPanel.Size = new System.Drawing.Size(326, 337);
             this.panelCatalogPanel.TabIndex = 14;
             // 
             // catalogPanel
@@ -567,7 +482,7 @@
             this.btnCustomerPanel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCustomerPanel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomerPanel.ForeColor = System.Drawing.Color.Indigo;
-            this.btnCustomerPanel.Location = new System.Drawing.Point(372, 849);
+            this.btnCustomerPanel.Location = new System.Drawing.Point(370, 852);
             this.btnCustomerPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCustomerPanel.Name = "btnCustomerPanel";
             this.btnCustomerPanel.Size = new System.Drawing.Size(134, 62);
@@ -584,10 +499,10 @@
             this.ClientSize = new System.Drawing.Size(1840, 934);
             this.Controls.Add(this.btnCustomerPanel);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.panelCatalogPanel);
             this.Controls.Add(this.panelPurchase);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.mainGridView);
@@ -659,17 +574,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxTotal;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button btnCheckOut;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnCustomerPanel;
         private System.Windows.Forms.Button btnRefreshCart;
         private System.Windows.Forms.Button btnTransactions;
