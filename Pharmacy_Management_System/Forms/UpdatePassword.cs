@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Pharmacy_Management_System.Access;
 
 namespace Pharmacy_Management_System.Windows
 {
@@ -23,19 +24,17 @@ namespace Pharmacy_Management_System.Windows
             }
             else
             {
-                String ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
+                DataAccess access = new DataAccess();
                 String sql = "update UserLogIn set password = '" + textBox6.Text + "' where id = '"+label3.Text+"'";
-                SqlConnection conn = new SqlConnection(ConnectionString);
-                SqlCommand sqlCmd = new SqlCommand(sql, conn);
+                access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
                 //DataTable dt = new DataTable();
 
-                sqlCmd.Connection.Open();
-                sqlCmd.ExecuteNonQuery();
-                sqlCmd.Dispose();
-                //dataGridView1.DataSource = dt;
-                sqlCmd.Connection.Close();
-                conn.Close();
+                access.SqlCmd.Connection.Open();
+                access.SqlCmd.ExecuteNonQuery();
+                access.SqlCmd.Dispose();
+                access.SqlCmd.Connection.Close();
+                access.SqlCon.Close();
                 MessageBox.Show("Successfully updated password!");
             }
                 

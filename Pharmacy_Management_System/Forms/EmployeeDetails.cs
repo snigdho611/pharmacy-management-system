@@ -48,17 +48,14 @@ namespace Pharmacy_Management_System.Windows
                 }
                 else
                 {
-                    String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
-                    String sql = "select * from UserLogIn where id = " + Convert.ToInt32(dtGLobal.Rows[selectedRowIndex][0]) + ";";
-                    SqlConnection conn = new SqlConnection(ConnectionString);
-                    SqlCommand sqlCmd = new SqlCommand(sql, conn);
-                    
-
+                    DataAccess access = new DataAccess();
+                    String sql = "select * from admin where id = " + Convert.ToInt32(dtGLobal.Rows[selectedRowIndex][0]) + ";";
+                    access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
                     DataTable dtlocal1 = new DataTable();
-                    sqlCmd.Connection.Open();
-                    dtlocal1.Load(sqlCmd.ExecuteReader());
-                    sqlCmd.Connection.Close();
+                    access.SqlCmd.Connection.Open();
+                    dtlocal1.Load(access.SqlCmd.ExecuteReader());
+                    access.SqlCmd.Connection.Close();
 
                     //MessageBox.Show(Convert.ToString(dt.Rows[selectedRowIndex][3]));
                     UpdatePassword UP = new UpdatePassword();
@@ -91,7 +88,7 @@ namespace Pharmacy_Management_System.Windows
 
 
                     DataAccess access = new DataAccess();
-                    String sql = "select * from UserLogIn where id = "+ Convert.ToInt32(dtGLobal.Rows[selectedRowIndex][0])+";";
+                    String sql = "select * from admin where id = "+ Convert.ToInt32(dtGLobal.Rows[selectedRowIndex][0])+";";
                     access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
                     DataTable dt2 = new DataTable();

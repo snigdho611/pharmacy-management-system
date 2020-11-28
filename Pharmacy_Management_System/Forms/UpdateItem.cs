@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Pharmacy_Management_System.Access;
 
 namespace Pharmacy_Management_System.Windows
 {
@@ -20,16 +21,15 @@ namespace Pharmacy_Management_System.Windows
             }
             else
             {
-                String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
-                String sql = "update Catalogue Set item = '" + textBox1.Text + "', details = '" + textBox2.Text + "', stock = " + textBox3.Text + ", price = " + textBox4.Text + "where id = " + CatalogueKey + ";";
-                SqlConnection conn = new SqlConnection(ConnectionString);
-                SqlCommand sqlCmd = new SqlCommand(sql, conn);
+                DataAccess access = new DataAccess();
+                String sql = "update catalog Set item = '" + textBox1.Text + "', details = '" + textBox2.Text + "', stock = " + textBox3.Text + ", price = " + textBox4.Text + "where id = " + CatalogueKey + ";";
+                access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
-                sqlCmd.Connection.Open();
-                sqlCmd.ExecuteNonQuery();
-                sqlCmd.Dispose();
-                sqlCmd.Connection.Close();
-                conn.Close();
+                access.SqlCmd.Connection.Open();
+                access.SqlCmd.ExecuteNonQuery();
+                access.SqlCmd.Dispose();
+                access.SqlCmd.Connection.Close();
+                access.SqlCon.Close();
                 MessageBox.Show("Successfully Updated item details!");
                 this.Dispose();
             }
