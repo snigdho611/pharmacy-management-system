@@ -201,12 +201,13 @@ namespace Pharmacy_Management_System
         }
 
         public static int invoice = 0;
+        private StreamWriter invoiceLocation = new StreamWriter(@"D:\Snigdho\Github\Pharmacy_Management_System\Pharmacy_Management_System\Invoices\Invoice_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt");
 
         private void button7_Click(object sender, EventArgs e)
         {
             int totalList = cartGridView.Rows.Count - 1;
 
-            using (StreamWriter writer = new StreamWriter(@"D:\Snigdho\Github\Pharmacy_Management_System\Pharmacy_Management_System\Invoices\Invoice_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt"))
+            using (StreamWriter writer = invoiceLocation)
             {
                 writer.WriteLine("Product     |     " + "Price      |");
 
@@ -222,171 +223,6 @@ namespace Pharmacy_Management_System
                 writer.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
                 writer.WriteLine("Billed by: " + textBox1.Text);
             }
-
-            /*
-            invoice = invoice + 1;
-            total = 0;
-            
-            int totalList = cartGridView.Rows.Count-1;
-            if (Convert.ToInt32(totalList) <= 0)
-            {
-                MessageBox.Show("You didn't select products!");
-
-            }
-            else if ((String.IsNullOrWhiteSpace(textBox5.Text) == true || String.IsNullOrWhiteSpace(textBox6.Text) == true || String.IsNullOrWhiteSpace(textBox7.Text) == true) && String.IsNullOrWhiteSpace(textBox8.Text) == true)
-            {
-                String totalItemsName = null;
-                for (int i = 0; i <= totalList; i++)
-                {
-                    totalItemsName = totalItemsName + Convert.ToString(cartGridView["Column2", i].Value) + "x" + Convert.ToString(cartGridView["Column3", i].Value) + " ";
-                }
-
-                DataAccess access = new DataAccess();
-                string sql = "insert into Transactions (items, total, datetime) values ('" + totalItemsName + "', " + textBox4.Text + ", GETDATE())";
-                SqlCommand sqlCmd = new SqlCommand(sql, access.SqlCon);
-
-                access.SqlCmd.Connection.Open();
-                sqlCmd.ExecuteNonQuery();
-                sqlCmd.Dispose();
-                sqlCmd.Connection.Close();
-                access.SqlCmd.Connection.Close();
-                MessageBox.Show("Successfully inserted new transaction!");
-                //this.Dispose();
-
-                using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt"))
-                {
-                    writer.WriteLine("Product     |     " + "Price      |");
-
-                    for (int i = 0; i < totalList; i++)
-                    {
-
-                        writer.WriteLine(Convert.ToString(cartGridView["Column2", i].Value) + " x " +
-                            Convert.ToString(cartGridView["Column3", i].Value) + "      |      " +
-                            Convert.ToString(cartGridView["Column4", i].Value));
-                    }
-                    writer.WriteLine("Customer ID: " + textBox8.Text);
-                    writer.WriteLine("Total Price: " + textBox4.Text);
-                    writer.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
-                    writer.WriteLine("Billed by: " + textBox1.Text);
-                }
-
-
-            }
-
-            else if ((String.IsNullOrWhiteSpace(textBox5.Text) == true || String.IsNullOrWhiteSpace(textBox6.Text) == true || String.IsNullOrWhiteSpace(textBox7.Text) == true) && String.IsNullOrWhiteSpace(textBox8.Text) == false)
-            {
-                String totalItemsName = null;
-                for (int i = 0; i <= totalList; i++)
-                {
-                    totalItemsName = totalItemsName + Convert.ToString(cartGridView["Column2", i].Value) + "x" + Convert.ToString(cartGridView["Column3", i].Value) + " ";
-                }
-
-                DataAccess access = new DataAccess();
-                string sql = "select * from Customer where cusid = " + textBox8.Text;
-
-                SqlCommand sqlCmd = new SqlCommand(sql, access.SqlCon);
-
-                DataTable dtTemp = new DataTable();
-
-                access.SqlCmd.Connection.Open();
-                dtTemp.Load(sqlCmd.ExecuteReader());
-
-                if (dtTemp.Rows.Count > 0)
-                {
-                    string sql2 = "insert into Transactions (cusID, items, total, datetime) values (" + textBox8.Text + ",'" + totalItemsName + "', " + textBox4.Text + ", GETDATE())";
-                    SqlCommand sqlCmd2 = new SqlCommand(sql2, access.SqlCon);
-
-                    sqlCmd2.Connection.Open();
-                    sqlCmd2.ExecuteNonQuery();
-                    sqlCmd2.Dispose();
-                    sqlCmd2.Connection.Close();
-                    access.SqlCmd.Connection.Close();
-                    MessageBox.Show("Successfully inserted new transaction!");
-
-                    using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt"))
-                    {
-                        writer.WriteLine("Product     |     " + "Price      |");
-
-                        for (int i = 0; i <= totalList; i++)
-                        {
-
-                            writer.WriteLine(Convert.ToString(cartGridView["Column2", i].Value) + " x " +
-                                Convert.ToString(cartGridView["Column3", i].Value) + "      |      " +
-                                Convert.ToString(cartGridView["Column4", i].Value));
-                        }
-                        writer.WriteLine("Customer ID: " + textBox8.Text);
-                        writer.WriteLine("Total Price: " + textBox4.Text);
-                        writer.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
-                        writer.WriteLine("Billed by: " + textBox1.Text);
-
-                    }
-                }
-                else if (dtTemp.Rows.Count == 0)
-                {
-                    MessageBox.Show("Customer ID unavailable");
-                }
-            }
-            //If a new customer wants to enroll with their name, mail and phone
-            else if ((String.IsNullOrWhiteSpace(textBox5.Text) == false || String.IsNullOrWhiteSpace(textBox6.Text) == false || String.IsNullOrWhiteSpace(textBox7.Text) == false) && String.IsNullOrWhiteSpace(textBox8.Text) == true)
-            {
-                String totalItemsName = null;
-                for (int i = 0; i <= totalList; i++)
-                {
-                    totalItemsName = totalItemsName + Convert.ToString(cartGridView["Column2", i].Value) + "x" + Convert.ToString(cartGridView["Column3", i].Value) + " ";
-                }
-
-                MessageBox.Show("Added Customer");
-
-                DataAccess access = new DataAccess();
-                string sql = "insert into Customer (name, email, phone, total) values('"+textBox5.Text+"','"+textBox6.Text+"','"+textBox7.Text+"',"+textBox4.Text+")";
-                string sql2 = "select top 1 cusID from Customer Order by cusID desc";
-                SqlCommand sqlCmd = new SqlCommand(sql, access.SqlCon);
-                SqlCommand sqlCmd2 = new SqlCommand(sql2, access.SqlCon);
-
-                DataTable dtTemp = new DataTable();
-
-                access.SqlCmd.Connection.Open();
-                access.SqlCmd.ExecuteNonQuery();
-                dtTemp.Load(sqlCmd2.ExecuteReader());
-                access.SqlCmd.Connection.Close();
-
-                if (dtTemp.Rows.Count > 0)
-                {
-                    string sql3 = "insert into Transactions (cusID, items, total, datetime) values (" + Convert.ToInt32(dtTemp.Rows[0][0]) + ",'" + totalItemsName + "', " + textBox4.Text + ", GETDATE())";
-                    access.SqlCmd = new SqlCommand(sql3, access.SqlCon);
-
-                    access.SqlCmd.Connection.Open();
-                    access.SqlCmd.ExecuteNonQuery();
-                    access.SqlCmd.Dispose();
-                    access.SqlCmd.Connection.Close();
-                    MessageBox.Show("Successfully inserted new transaction!");
-
-                    using (StreamWriter writer = new StreamWriter(@"C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\Invoice\Invoice_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt"))
-                    {
-                        writer.WriteLine("Product     |     " + "Price      |");
-
-                        for (int i = 0; i <= totalList; i++)
-                        {
-
-                            writer.WriteLine(Convert.ToString(cartGridView["Column2", i].Value) + " x " +
-                                Convert.ToString(cartGridView["Column3", i].Value) + "      |      " +
-                                Convert.ToString(cartGridView["Column4", i].Value));
-                        }
-                        writer.WriteLine("Customer ID: " + textBox8.Text);
-                        writer.WriteLine("Total Price: " + textBox4.Text);
-                        writer.WriteLine(DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"));
-                        writer.WriteLine("Billed by: " + textBox1.Text);
-
-                    }
-                }
-            }
-            else if ((String.IsNullOrWhiteSpace(textBox5.Text) == false || String.IsNullOrWhiteSpace(textBox6.Text) == false || String.IsNullOrWhiteSpace(textBox7.Text) == false) && String.IsNullOrWhiteSpace(textBox8.Text) == false)
-            {
-                MessageBox.Show("Invalid, remove Customer ID field for new user!");
-            }
-            */
-
-
         }
 
         private void button8_Click(object sender, EventArgs e)
