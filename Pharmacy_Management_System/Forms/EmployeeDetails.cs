@@ -23,17 +23,16 @@ namespace Pharmacy_Management_System.Windows
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String ConnectionString = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\LENOVO\\source\\repos\\SemesterDemo\\SemesterDemo\\DB_SAF.mdf; Integrated Security = True; Connect Timeout = 30";
-            String sql = "select Id as 'ID', name as 'name', designation as 'designation', email as 'email', phone as 'phone' from UserLogIn";
-            SqlConnection conn = new SqlConnection(ConnectionString);
-            SqlCommand sqlCmd = new SqlCommand(sql, conn);
+            DataAccess access = new DataAccess();
+            String sql = "select Id as 'ID', name as 'name', designation as 'designation', email as 'email', phone as 'phone' from admin";
+            access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
             DataTable dt = new DataTable();
-            sqlCmd.Connection.Open();
-            dt.Load(sqlCmd.ExecuteReader());
-            dtGLobal.Load(sqlCmd.ExecuteReader());
+            access.SqlCmd.Connection.Open();
+            dt.Load(access.SqlCmd.ExecuteReader());
+            dtGLobal.Load(access.SqlCmd.ExecuteReader());
             dataGridView1.DataSource = dt;
-            sqlCmd.Connection.Close();
+            access.SqlCmd.Connection.Close();
             
         }
 
@@ -136,7 +135,7 @@ namespace Pharmacy_Management_System.Windows
                 else
                 {
                     DataAccess access = new DataAccess();
-                    String sql = "delete from UserLogIn where id = " + Convert.ToInt32(dtGLobal.Rows[selectedRowIndex][0]) + ";";
+                    String sql = "delete from admin where id = " + Convert.ToInt32(dtGLobal.Rows[selectedRowIndex][0]) + ";";
                     access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
                     DataTable dt2 = new DataTable();
