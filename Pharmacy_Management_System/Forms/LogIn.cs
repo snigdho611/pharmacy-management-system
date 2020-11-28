@@ -1,4 +1,5 @@
 ﻿using Pharmacy_Management_System.Windows;
+using Pharmacy_Management_System.Access;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -31,15 +32,13 @@ namespace Pharmacy_Management_System
             }
             else
             {
-                String ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Snigdho\\Github\\Pharmacy_Management_System\\SemesterDemo\\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
+                DataAccess access = new DataAccess();
                 string sql = "select * from admin where id = '" + txtUsername.Text + "'AND password = '" + txtPass.Text + "';";
-
-                SqlConnection conn = new SqlConnection(ConnectionString);
-                SqlCommand sqlCmd = new SqlCommand(sql, conn);
+                SqlCommand sqlCmd = new SqlCommand(sql, access.SqlCon);
 
                 DataTable dt = new DataTable();
 
-                sqlCmd.Connection.Open();
+                access.SqlCon.Open();
                 //var affectedRowCount=sqlCmd.ExecuteNonQuery();
                 dt.Load(sqlCmd.ExecuteReader());
 

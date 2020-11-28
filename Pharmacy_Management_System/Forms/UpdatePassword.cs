@@ -14,18 +14,18 @@ namespace Pharmacy_Management_System.Windows
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(String.IsNullOrEmpty(textBox5.Text)|| String.IsNullOrEmpty(textBox6.Text))
+            if(String.IsNullOrEmpty(textBoxPassword.Text)|| String.IsNullOrEmpty(textBoxPasswordConfirm.Text))
             {
                 MessageBox.Show("Please enter a new password and again to confirm it!");
             }
-            else if(textBox5.Text != textBox6.Text || textBox6.Text != textBox5.Text)
+            else if(textBoxPassword.Text != textBoxPasswordConfirm.Text || textBoxPasswordConfirm.Text != textBoxPassword.Text)
             {
                 MessageBox.Show("The passwords do not match!");
             }
             else
             {
                 DataAccess access = new DataAccess();
-                String sql = "update UserLogIn set password = '" + textBox6.Text + "' where id = '"+label3.Text+"'";
+                String sql = "update UserLogIn set password = '" + textBoxPasswordConfirm.Text + "' where id = '"+label3.Text+"'";
                 access.SqlCmd = new SqlCommand(sql, access.SqlCon);
 
                 //DataTable dt = new DataTable();

@@ -162,11 +162,13 @@
             // textBox1
             // 
             this.textBox1.AcceptsTab = true;
+            this.textBox1.BackColor = System.Drawing.Color.Plum;
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(146, 532);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(194, 26);
+            this.textBox1.Size = new System.Drawing.Size(194, 30);
             this.textBox1.TabIndex = 6;
             // 
             // btnDeleteItem

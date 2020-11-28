@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Pharmacy_Management_System.Access;
 
 namespace Pharmacy_Management_System.Windows
 {
@@ -32,14 +33,13 @@ namespace Pharmacy_Management_System.Windows
         }
         private void loadtbl_data()
         {
-            string cn_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
-            SqlConnection cn_connection = new SqlConnection(cn_string);
-            if (cn_connection.State != ConnectionState.Open) cn_connection.Open();
+            DataAccess access = new DataAccess();
+            if (access.SqlCon.State != ConnectionState.Open) access.SqlCon.Open();
 
-            string sqls = "SELECT * FROM Catalogue";
+            string sqls = "SELECT * FROM CATALOG";
 
             DataTable tbl = new DataTable();
-            SqlDataAdapter adapter = new SqlDataAdapter(sqls, cn_connection);
+            SqlDataAdapter adapter = new SqlDataAdapter(sqls, access.SqlCon);
             adapter.Fill(tbl);
 
             dataGridViewItems.DataSource = tbl;
