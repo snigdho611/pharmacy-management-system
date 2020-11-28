@@ -62,7 +62,9 @@
             // 
             this.dataGridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewItems.Location = new System.Drawing.Point(22, 42);
+            this.dataGridViewItems.MultiSelect = false;
             this.dataGridViewItems.Name = "dataGridViewItems";
+            this.dataGridViewItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewItems.Size = new System.Drawing.Size(507, 159);
             this.dataGridViewItems.TabIndex = 0;
             this.dataGridViewItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewItems_CellClick);
@@ -117,7 +119,7 @@
             this.button1A2C.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1A2C.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
             this.button1A2C.ForeColor = System.Drawing.Color.Indigo;
-            this.button1A2C.Location = new System.Drawing.Point(646, 85);
+            this.button1A2C.Location = new System.Drawing.Point(646, 185);
             this.button1A2C.Name = "button1A2C";
             this.button1A2C.Size = new System.Drawing.Size(83, 41);
             this.button1A2C.TabIndex = 1;
@@ -224,7 +226,7 @@
             this.buttonBuy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonBuy.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
             this.buttonBuy.ForeColor = System.Drawing.Color.Indigo;
-            this.buttonBuy.Location = new System.Drawing.Point(646, 132);
+            this.buttonBuy.Location = new System.Drawing.Point(795, 390);
             this.buttonBuy.Name = "buttonBuy";
             this.buttonBuy.Size = new System.Drawing.Size(83, 43);
             this.buttonBuy.TabIndex = 5;
@@ -319,7 +321,7 @@
             this.Controls.Add(this.dataGridViewItems);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerUi";
-            this.Text = "Customer Cart";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.CustomerUi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).EndInit();
