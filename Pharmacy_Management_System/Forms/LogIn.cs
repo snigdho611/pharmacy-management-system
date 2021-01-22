@@ -26,7 +26,7 @@ namespace Pharmacy_Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(txtUsername.Text)|| string.IsNullOrWhiteSpace(txtPass.Text))
+            if(string.IsNullOrWhiteSpace(txtUsername.Text)|| string.IsNullOrWhiteSpace(txtPass.Text)|| txtUsername.Text== "Enter username here" || txtPass.Text == "Enter password here")
             {
                 MessageBox.Show("Please enter a valid username and password!");
             }
