@@ -49,10 +49,10 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button4.BackColor = System.Drawing.Color.Teal;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.Indigo;
+            this.button4.ForeColor = System.Drawing.Color.Snow;
             this.button4.Location = new System.Drawing.Point(485, 411);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(70, 27);

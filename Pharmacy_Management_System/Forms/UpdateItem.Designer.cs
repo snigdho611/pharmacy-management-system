@@ -126,10 +126,10 @@ namespace Pharmacy_Management_System.Windows
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.BackColor = System.Drawing.Color.Teal;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Indigo;
+            this.button1.ForeColor = System.Drawing.Color.Snow;
             this.button1.Location = new System.Drawing.Point(71, 257);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 28);
@@ -140,10 +140,10 @@ namespace Pharmacy_Management_System.Windows
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button2.BackColor = System.Drawing.Color.Teal;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.Indigo;
+            this.button2.ForeColor = System.Drawing.Color.Snow;
             this.button2.Location = new System.Drawing.Point(199, 257);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(78, 28);

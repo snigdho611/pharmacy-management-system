@@ -65,18 +65,18 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.BackColor = System.Drawing.Color.Plum;
+            this.textBoxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.textBoxName.Location = new System.Drawing.Point(165, 76);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(100, 20);
+            this.textBoxName.Size = new System.Drawing.Size(130, 20);
             this.textBoxName.TabIndex = 1;
             // 
             // textBoxPhoneNo
             // 
-            this.textBoxPhoneNo.BackColor = System.Drawing.Color.Plum;
+            this.textBoxPhoneNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.textBoxPhoneNo.Location = new System.Drawing.Point(165, 131);
             this.textBoxPhoneNo.Name = "textBoxPhoneNo";
-            this.textBoxPhoneNo.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPhoneNo.Size = new System.Drawing.Size(130, 20);
             this.textBoxPhoneNo.TabIndex = 1;
             this.textBoxPhoneNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPhoneNo_KeyPress);
             // 
@@ -131,10 +131,10 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.BackColor = System.Drawing.Color.Plum;
+            this.textBoxEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.textBoxEmail.Location = new System.Drawing.Point(165, 102);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(100, 20);
+            this.textBoxEmail.Size = new System.Drawing.Size(130, 20);
             this.textBoxEmail.TabIndex = 5;
             // 
             // labelEmail
