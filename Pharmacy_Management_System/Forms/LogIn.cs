@@ -38,9 +38,16 @@ namespace Pharmacy_Management_System
 
                 DataTable dt = new DataTable();
 
-                access.SqlCon.Open();
-                //var affectedRowCount=sqlCmd.ExecuteNonQuery();
-                dt.Load(sqlCmd.ExecuteReader());
+                try
+                {
+                    access.SqlCon.Open();
+                    dt.Load(sqlCmd.ExecuteReader());
+                    access.SqlCon.Close();
+                }
+                catch(Exception E)
+                {
+                    MessageBox.Show(E.ToString());
+                }
 
                 if (dt.Rows.Count > 0)
                 {
