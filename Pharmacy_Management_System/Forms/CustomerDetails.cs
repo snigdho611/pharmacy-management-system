@@ -41,7 +41,7 @@ namespace Pharmacy_Management_System.Windows
             }
             else
             {
-                MainFrame.invoice = MainFrame.invoice + 1;
+                MainFrame.invoice += 1;
                 
                 CustomerUi F = new CustomerUi();
                 

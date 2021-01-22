@@ -80,21 +80,21 @@ namespace Pharmacy_Management_System.Windows
                     TotalPrice = Convert.ToInt32(textBox_TP.Text);
                     //
 
-                    price = price * quantity;
-                    TotalPrice = TotalPrice + price;
+                    price *= quantity;
+                    TotalPrice += price;
                     //stockLeft = stockLeft - quantity;
 
                     if (quantity > stock) { MessageBox.Show("Not available"); }
                     else
                     {
 
-                        stock = stock - quantity;
+                        stock -= quantity;
                         textBox_Stock.Text = (stock.ToString());
                         textBox_Price.Text = (price.ToString());
                         textBox_TP.Text = (TotalPrice.ToString());
                         // textBox_Leftstock.Text = (stockLeft.ToString());
 
-                        int row = 0;
+                        int row;
                         dataGridViewCart.Rows.Add();
                         row = dataGridViewCart.Rows.Count - 2;
                         dataGridViewCart["Item", row].Value = label_item.Text;
@@ -105,7 +105,7 @@ namespace Pharmacy_Management_System.Windows
 
 
                         int selectedRowCount = dataGridViewItems.Rows.GetRowCount(DataGridViewElementStates.Selected);
-                        int selectedRowIndex = dataGridViewItems.CurrentCell.RowIndex;
+                        //int selectedRowIndex = dataGridViewItems.CurrentCell.RowIndex;
 
                         if (selectedRowCount > 1) { MessageBox.Show("Please select a single row"); }
                         else
@@ -183,12 +183,12 @@ namespace Pharmacy_Management_System.Windows
                 int stockLeft; int stockd;
                 stockLeft = Convert.ToInt32(textBox_Leftstock.Text);
                 stockd = Convert.ToInt32(textBox_Stock.Text);
-                stockLeft = stockLeft + stockd;
+                stockLeft += stockd;
                 textBox_Leftstock.Text = stockLeft.ToString();
 
                 int tp = Convert.ToInt32(textBox_TP.Text);
                 int price = Convert.ToInt32(textBox_Price.Text);
-                tp = tp - price;
+                tp -= price;
                 textBox_TP.Text = (tp.ToString());
 
                 string cn_string = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\LENOVO\source\repos\SemesterDemo\SemesterDemo\DB_SAF.mdf;Integrated Security=True;Connect Timeout=30";
