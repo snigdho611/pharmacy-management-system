@@ -212,7 +212,7 @@ namespace Pharmacy_Management_System
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Indigo;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.label3.Location = new System.Drawing.Point(3, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 19);
@@ -297,7 +297,7 @@ namespace Pharmacy_Management_System
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Indigo;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.label4.Location = new System.Drawing.Point(12, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 19);
@@ -321,7 +321,7 @@ namespace Pharmacy_Management_System
             // 
             this.catalogPanel.AutoSize = true;
             this.catalogPanel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.catalogPanel.ForeColor = System.Drawing.Color.Indigo;
+            this.catalogPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.catalogPanel.Location = new System.Drawing.Point(12, 10);
             this.catalogPanel.Name = "catalogPanel";
             this.catalogPanel.Size = new System.Drawing.Size(107, 19);

@@ -45,7 +45,7 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.ForeColor = System.Drawing.Color.Indigo;
+            this.labelName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.labelName.Location = new System.Drawing.Point(110, 76);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(54, 19);
@@ -56,7 +56,7 @@
             // 
             this.labelPhoneNo.AutoSize = true;
             this.labelPhoneNo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPhoneNo.ForeColor = System.Drawing.Color.Indigo;
+            this.labelPhoneNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.labelPhoneNo.Location = new System.Drawing.Point(55, 130);
             this.labelPhoneNo.Name = "labelPhoneNo";
             this.labelPhoneNo.Size = new System.Drawing.Size(113, 19);
@@ -84,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Indigo;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.label1.Location = new System.Drawing.Point(65, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 19);
@@ -141,7 +141,7 @@
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.ForeColor = System.Drawing.Color.Indigo;
+            this.labelEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.labelEmail.Location = new System.Drawing.Point(114, 102);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(52, 19);

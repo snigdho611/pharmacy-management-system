@@ -43,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Indigo;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.label1.Location = new System.Drawing.Point(45, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 17);
@@ -54,7 +54,7 @@
             // 
             this.label_NameR.AutoSize = true;
             this.label_NameR.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NameR.ForeColor = System.Drawing.Color.Indigo;
+            this.label_NameR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.label_NameR.Location = new System.Drawing.Point(83, 118);
             this.label_NameR.Name = "label_NameR";
             this.label_NameR.Size = new System.Drawing.Size(47, 17);
@@ -65,7 +65,7 @@
             // 
             this.label_PhoneNoR.AutoSize = true;
             this.label_PhoneNoR.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PhoneNoR.ForeColor = System.Drawing.Color.Indigo;
+            this.label_PhoneNoR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.label_PhoneNoR.Location = new System.Drawing.Point(60, 152);
             this.label_PhoneNoR.Name = "label_PhoneNoR";
             this.label_PhoneNoR.Size = new System.Drawing.Size(70, 17);
@@ -76,7 +76,7 @@
             // 
             this.label_TPR.AutoSize = true;
             this.label_TPR.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_TPR.ForeColor = System.Drawing.Color.Indigo;
+            this.label_TPR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.label_TPR.Location = new System.Drawing.Point(55, 188);
             this.label_TPR.Name = "label_TPR";
             this.label_TPR.Size = new System.Drawing.Size(75, 17);
@@ -87,7 +87,7 @@
             // 
             this.labelTPR.AutoSize = true;
             this.labelTPR.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTPR.ForeColor = System.Drawing.Color.Indigo;
+            this.labelTPR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.labelTPR.Location = new System.Drawing.Point(136, 188);
             this.labelTPR.Name = "labelTPR";
             this.labelTPR.Size = new System.Drawing.Size(26, 17);
@@ -98,7 +98,7 @@
             // 
             this.labelPNR.AutoSize = true;
             this.labelPNR.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPNR.ForeColor = System.Drawing.Color.Indigo;
+            this.labelPNR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.labelPNR.Location = new System.Drawing.Point(136, 152);
             this.labelPNR.Name = "labelPNR";
             this.labelPNR.Size = new System.Drawing.Size(28, 17);
@@ -109,7 +109,7 @@
             // 
             this.labelNameR.AutoSize = true;
             this.labelNameR.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameR.ForeColor = System.Drawing.Color.Indigo;
+            this.labelNameR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.labelNameR.Location = new System.Drawing.Point(136, 118);
             this.labelNameR.Name = "labelNameR";
             this.labelNameR.Size = new System.Drawing.Size(19, 17);

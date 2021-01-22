@@ -48,7 +48,7 @@ namespace Pharmacy_Management_System.Windows
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Indigo;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.label1.Location = new System.Drawing.Point(56, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 19);
@@ -59,7 +59,7 @@ namespace Pharmacy_Management_System.Windows
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Indigo;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.label2.Location = new System.Drawing.Point(39, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 19);
@@ -70,7 +70,7 @@ namespace Pharmacy_Management_System.Windows
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Indigo;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.label3.Location = new System.Drawing.Point(49, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 19);
@@ -81,7 +81,7 @@ namespace Pharmacy_Management_System.Windows
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Indigo;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(10)))));
             this.label4.Location = new System.Drawing.Point(49, 172);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 19);
