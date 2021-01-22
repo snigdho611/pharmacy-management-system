@@ -77,13 +77,13 @@ namespace Pharmacy_Management_System
             if (txtUsername.Text == "Enter username here")
             {
                 txtUsername.Text = null;
-                txtUsername.ForeColor = System.Drawing.Color.Black;
+                txtUsername.ForeColor = System.Drawing.Color.Lavender;
             }
 
             if (String.IsNullOrWhiteSpace(txtPass.Text) == true)
             {
                 txtPass.PasswordChar = '\0';
-                txtPass.ForeColor = System.Drawing.Color.DimGray;
+                txtPass.ForeColor = System.Drawing.Color.Lavender;
                 txtPass.Text = "Enter password here";
             }
         }
@@ -93,13 +93,13 @@ namespace Pharmacy_Management_System
             if (txtPass.Text == "Enter password here")
             {
                 txtPass.Text = null;
-                txtPass.ForeColor = System.Drawing.Color.Black;
+                txtPass.ForeColor = System.Drawing.Color.Lavender;
                 txtPass.PasswordChar = '•';
             }
 
             if (String.IsNullOrWhiteSpace(txtUsername.Text) == true)
             {
-                txtUsername.ForeColor = System.Drawing.Color.DimGray;
+                txtUsername.ForeColor = System.Drawing.Color.Lavender;
                 txtUsername.Text = "Enter username here";
             }
         }

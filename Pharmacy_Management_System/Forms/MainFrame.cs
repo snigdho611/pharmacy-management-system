@@ -201,13 +201,12 @@ namespace Pharmacy_Management_System
         }
 
         public static int invoice = 0;
-        private StreamWriter invoiceLocation = new StreamWriter(@"D:\Snigdho\Github\Pharmacy_Management_System\Pharmacy_Management_System\Invoices\Invoice_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt");
 
         private void button7_Click(object sender, EventArgs e)
         {
             int totalList = cartGridView.Rows.Count - 1;
 
-            using (StreamWriter writer = invoiceLocation)
+            using (StreamWriter writer = new StreamWriter(@"D:\Snigdho\Github\Pharmacy_Management_System\Pharmacy_Management_System\Invoices\Invoice_" + DateTime.Now.ToString("yyyyMMddHHmmss") + ".txt"))
             {
                 writer.WriteLine("Product     |     " + "Price      |");
 
