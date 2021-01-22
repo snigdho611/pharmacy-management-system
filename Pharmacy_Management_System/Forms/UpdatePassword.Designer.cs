@@ -43,7 +43,7 @@
             // 
             // textBoxPasswordConfirm
             // 
-            this.textBoxPasswordConfirm.BackColor = System.Drawing.Color.Plum;
+            this.textBoxPasswordConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.textBoxPasswordConfirm.Location = new System.Drawing.Point(128, 112);
             this.textBoxPasswordConfirm.Name = "textBoxPasswordConfirm";
             this.textBoxPasswordConfirm.PasswordChar = '*';
@@ -63,7 +63,7 @@
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.BackColor = System.Drawing.Color.Plum;
+            this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.textBoxPassword.Location = new System.Drawing.Point(128, 76);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';

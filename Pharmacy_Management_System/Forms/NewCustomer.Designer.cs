@@ -29,6 +29,7 @@ namespace Pharmacy_Management_System.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewCustomer));
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -67,7 +68,7 @@ namespace Pharmacy_Management_System.Forms
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Plum;
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.textBox3.Location = new System.Drawing.Point(113, 132);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(161, 20);
@@ -75,7 +76,7 @@ namespace Pharmacy_Management_System.Forms
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Plum;
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.textBox2.Location = new System.Drawing.Point(113, 93);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(161, 20);
@@ -83,7 +84,7 @@ namespace Pharmacy_Management_System.Forms
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Plum;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.textBox1.Location = new System.Drawing.Point(113, 56);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(161, 20);
@@ -140,6 +141,7 @@ namespace Pharmacy_Management_System.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NewCustomer";
             this.Text = "Add New Customer";

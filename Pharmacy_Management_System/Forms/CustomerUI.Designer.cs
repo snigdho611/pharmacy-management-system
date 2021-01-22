@@ -328,7 +328,7 @@ namespace Pharmacy_Management_System.Windows
             this.Controls.Add(this.dataGridViewItems);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerUi";
-            this.Text = " ";
+            this.Text = " Customer Interface";
             this.Load += new System.EventHandler(this.CustomerUi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCart)).EndInit();

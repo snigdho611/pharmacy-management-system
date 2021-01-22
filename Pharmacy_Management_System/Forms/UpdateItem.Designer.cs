@@ -90,7 +90,7 @@ namespace Pharmacy_Management_System.Windows
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Plum;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(111, 56);
             this.textBox1.Name = "textBox1";
@@ -99,7 +99,7 @@ namespace Pharmacy_Management_System.Windows
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Plum;
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.textBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(111, 93);
             this.textBox2.Name = "textBox2";
@@ -108,7 +108,7 @@ namespace Pharmacy_Management_System.Windows
             // 
             // textBox3
             // 
-            this.textBox3.BackColor = System.Drawing.Color.Plum;
+            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.textBox3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(111, 132);
             this.textBox3.Name = "textBox3";
@@ -117,7 +117,7 @@ namespace Pharmacy_Management_System.Windows
             // 
             // textBox4
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Plum;
+            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.textBox4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(111, 173);
             this.textBox4.Name = "textBox4";

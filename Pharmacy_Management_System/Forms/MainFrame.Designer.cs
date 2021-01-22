@@ -148,7 +148,7 @@ namespace Pharmacy_Management_System
             // textBox1
             // 
             this.textBox1.AcceptsTab = true;
-            this.textBox1.BackColor = System.Drawing.Color.Plum;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(100, 348);
             this.textBox1.Name = "textBox1";
