@@ -103,5 +103,10 @@ namespace Pharmacy_Management_System
                 txtUsername.Text = "Enter username here";
             }
         }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
