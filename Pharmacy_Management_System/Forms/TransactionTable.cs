@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Pharmacy_Management_System.Access;
 
 namespace Pharmacy_Management_System.Windows
 {
@@ -12,7 +13,7 @@ namespace Pharmacy_Management_System.Windows
 
         private void TransactionTable_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button4_Click(object sender, EventArgs e)

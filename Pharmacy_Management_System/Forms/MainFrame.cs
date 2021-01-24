@@ -23,7 +23,7 @@ namespace Pharmacy_Management_System
             DataTable table = new DataTable();
             access.SqlDA.Fill(table);
             mainGridView.DataSource = table;
-            
+            access.SqlCon.Close();
         }
 
         private void AddItem_Click(object sender, EventArgs e)

@@ -35,7 +35,7 @@ namespace Pharmacy_Management_System.Access
 
         public DataAccess()
         {
-            sqlCon = new SqlConnection(ConnectionString);
+            SqlCon = new SqlConnection(ConnectionString);
         }
     }
 }
