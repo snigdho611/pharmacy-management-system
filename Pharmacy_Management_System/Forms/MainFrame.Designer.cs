@@ -186,7 +186,7 @@ namespace Pharmacy_Management_System
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel1.Controls.Add(this.btnLaunchPanel);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(12, 257);
@@ -222,7 +222,7 @@ namespace Pharmacy_Management_System
             // 
             // panelPurchase
             // 
-            this.panelPurchase.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelPurchase.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panelPurchase.Controls.Add(this.btnTransactions);
             this.panelPurchase.Controls.Add(this.label14);
             this.panelPurchase.Controls.Add(this.textBox8);
@@ -306,7 +306,7 @@ namespace Pharmacy_Management_System
             // 
             // panelCatalogPanel
             // 
-            this.panelCatalogPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelCatalogPanel.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panelCatalogPanel.Controls.Add(this.catalogPanel);
             this.panelCatalogPanel.Controls.Add(this.btnDeleteItem);
             this.panelCatalogPanel.Controls.Add(this.btnUpdateItem);
@@ -334,7 +334,7 @@ namespace Pharmacy_Management_System
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel4.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.panel4.Controls.Add(this.btnRefreshCart);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label6);
